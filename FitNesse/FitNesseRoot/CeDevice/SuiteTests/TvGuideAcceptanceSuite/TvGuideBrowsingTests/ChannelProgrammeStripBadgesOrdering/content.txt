@@ -1,0 +1,41 @@
+| Comment |
+| [[NGDEV-11564][https://www.stb.bskyb.com/jira/browse/NGDEV-11564]] | Ordering and positioning of badges in the Programme Strip |
+| Test Traceability Notes | As part of Fitnesse tests we cover most of the Acceptance Criteria |
+| As a product owner I want to position the badges in a particular way to ensure consistency across platforms. |
+
+!1 Android User Story
+| Comment |
+| TBC | Ordering and positioning of badges in the Programme Strip |
+| Test Traceability Notes | As part of Fitnesse tests we cover most of the Acceptance Criteria |
+| As a product owner I want to position the badges in a particular way to ensure consistency across platforms. |
+
+!4 Scenario: Check selected programmes displays the ordering of the badges as Age Rating, HD, Subtitle, Audio Description
+Where the flag is set to "true" -  display the badge Where the flag is set to "false" -  do not display the badge Badge
+
+'''Expected Results'''
+
+!| Ordered Query:(CEF) Programme Strip Badge Fixture | E7d2-e4ad |
+| Badge |
+| Age Rating U |
+| HD |
+| Subtitles |
+| Audio Description |
+
+| Ordered Query:(CEF) Programme Strip Badge Fixture | Z7d2-e79c |
+| Badge |
+| Age Rating U |
+| HD |
+
+!| Ordered Query:(CEF) Programme Strip Badge Fixture | E7d2-e3af |
+| Badge |
+| Age Rating 15 |
+
+!| Ordered Query:(CEF) Programme Strip Badge Fixture | E7d2-e3dd |
+| Badge |
+| Subtitles |
+| Audio Description |
+
+| Ordered Query:(CEF) Programme Strip Badge Fixture | E7d3-e5bd |
+| Badge |
+
+''!include -c ''<TvGuideAcceptanceSuite.ChannelScheduleErrorPage

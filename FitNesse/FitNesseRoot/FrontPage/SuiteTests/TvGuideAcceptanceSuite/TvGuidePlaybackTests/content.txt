@@ -1,0 +1,78 @@
+!lastmodified
+!1 User Story
+
+| [[NGDEV-6021][https://www.stb.bskyb.com/jira/browse/NGDEV-6021]]          |'''Tune TV to channel when main STB is in active mode'''            |
+| Test Traceability Notes                                                   |As part of Fitnesse tests we cover Acceptance Criteria 1-6          |
+|''As a viewer I want to select a channel to watch from my CE device to watch on the TV screen, so that I can view the channel on a bigger screen.''|
+
+
+!include -seamless <TvGuideAcceptanceSuite.TvChannelsData
+
+!1 Acceptance Criteria
+Scenario : Given playing a live channel, Then I should tune to the channel on the box
+
+!| script |(BEN) Box Live Playback Fixture|
+|play item|101                            |
+|check    |played           |101          |
+
+
+Scenario : Given playing a live channel, When I tune to the same channel again, Then I should tune to the same channel on the box
+
+!| script |(BEN) Box Live Playback Fixture|
+|play item|101                            |
+|check    |played           |101          |
+|play item|101                            |
+|check    |played           |101          |
+
+
+Scenario : Given playing a live channel, When I tune to different channel, then channel should be changed on the box
+
+!| script |(BEN) Box Live Playback Fixture|
+|play item|101                            |
+|Check    |Played           |101          |
+|Play item|102                            |
+|check    |played           |102          |
+|Play item|103              |             |
+|check    |played           |103          |
+
+
+!1 Errors Scenarios
+
+Scenario : Given playing a live playback show, when vwid not found, then a message is displayed
+
+!| script  |(BEN) Box Live Playback Fixture|
+|play item |101                            |
+|error code|3001                           |
+|check     |message     |vwid not found    |
+
+
+Scenario : Given playing a live playback show, service sid not found, then a message is displayed
+
+!| script  |(BEN) Box live Playback Fixture|
+|play item |102                            |
+|error code|3102                           |
+|check     |message |service sid not found |
+
+
+Scenario : Given playing a live playback show, when can not tune, then a message is displayed
+
+!| script  |(BEN) Box Live Playback Fixture               |
+|play item |103                                           |
+|error code|3103                                          |
+|check     |message|Could not tune as SI data is not ready|
+
+
+Scenario : Given playing a live playback show, when unspecified error occurs, then a message is displayed
+
+!| script  |(BEN) Box Live Playback Fixture      |
+|play item |104                                  |
+|error code|3106                                 |
+|check     |message|An unspecified error occurred|
+
+
+Scenario : Given playing a live playback show, when track tag is not found, then a message is displayed
+
+!| script  |(BEN) Box Live Playback Fixture|
+|play item |105                            |
+|error code|3104                           |
+|check     |message  |track tag not found  |

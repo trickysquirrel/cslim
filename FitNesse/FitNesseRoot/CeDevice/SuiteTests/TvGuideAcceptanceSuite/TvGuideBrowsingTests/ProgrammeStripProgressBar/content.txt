@@ -1,0 +1,52 @@
+!2 Progress bar - Programme Strip - Currently broadcasting
+Scenario : Given a currently broadcasting is selected, a Progress bar is displayed to show the duration of the programme left to watch.
+
+!2 iOS User Story
+| Comment |
+| [[NGDEV-8770][https://https://www.stb.bskyb.com/jira/browse/NGDEV-8770]] | Progress bar within Programme Strip |
+| Test Traceability Notes | As part of Fitnesse tests we cover most of the Acceptance Criteria |
+| As a viewer I want to see at a glance how much of the programme is left to watch, so that I can decide whether it is worth watching. |
+
+!4 Given the programme is currently broadcasting, the progress bar should be displayed. Otherwise progress bar is hidden
+!| script | (CEF) Progress Bar Fixture | $NOW |
+| loadData |
+| ensure | programme | Game Of Thrones | progressBarIsVisible | true |
+| ensure | programme | Life in the Future | progressBarIsVisible | false |
+| ensure | programme | Ancient History | progressBarIsVisible | false |
+
+!4 Given a new programme is selected which is currently broadcasting, the progress bar should display the current elapsed duration.
+!| script | (CEF) Progress Bar Fixture | $NOW | Top Gear Special |
+| loadData |
+| ensure | programmeProgress | 25 |
+
+!4 Given the user has selected a programme on the TV Schedule, the progress bar for that programme should update every minute.
+!| script | (CEF) Progress Bar Fixture | $NOW_PLUS_10 |
+| note | Revisit |
+
+!4 Given the user has selected a programme, & the user goes into the background & re-launches the app & programme is still currently broadcasting - the progress bar should be updated.
+!| script | (CEF) Progress Bar Fixture | $NOW | Game Of Thrones |
+| loadData |
+| ensure | programmeProgress | 0 |
+| app returns from background at time | $NOW_ADDING_10 |
+| ensure | programmeProgress | 25 |
+
+!4 Recording Indicator PVR Item Test Data
+| DT:(BEN) Recordings Builder |
+| Original Event ID | ID | Title | Status | Channel Number | Date |
+| !-E11Z-e65p-! | PVR01 | Game Of Thrones | RECORDING | 103 | $NOW |
+| Z7d2-e4bc | PVR02 | Life in the Future | PART RECORDED | 104 | $NOW |
+
+!4 Given the programme is currently broadcasting and recording, the progress bar should indicate the programme is recording.
+| script | (CEF) Progress Bar Fixture | $NOW |
+| loadData |
+| ensure | programme | Game Of Thrones | progressBarIsIndicatingRecording | true |
+
+!4 Given the programme is currently broadcasting (no associated PVR item), the progress bar should not indicate the programme is recording.
+| script | (CEF) Progress Bar Fixture | $NOW |
+| loadData |
+| ensure | programme | BBC News at Ten | progressBarIsIndicatingRecording | false |
+
+!4 Given the programme is currently broadcasting and PART RECORDED, the progress bar should not indicate the programme is recording.
+| script | (CEF) Progress Bar Fixture | $NOW |
+| loadData |
+| ensure | programme | Life in the Future | progressBarIsIndicatingRecording | false |

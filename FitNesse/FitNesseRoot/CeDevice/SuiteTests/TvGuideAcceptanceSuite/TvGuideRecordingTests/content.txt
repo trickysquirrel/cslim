@@ -1,0 +1,77 @@
+!1 Playback Scenarios
+!4 Given displaying a programme, when the programme is recordable, then the correct recording actions are presented
+| DT:(CEF) Programme Strip Fixture |
+| Event ID | Record Options? |
+| ${RECORDABLE_EVENT_ID} | Record Once |
+| ${LINKABLE_EVENT_ID} | Record Series |
+| ${RECORDABLE_LINKABLE_EVENT_ID} | Record Once, Record Series |
+| ${UNRECORDABLE_EVENT_ID} | null |
+
+!4 Given a recordable programme, when the programme is recorded, then the system books a recording on a Set Top Box.
+| script | (CEF) Recording Fixture | ${RECORDABLE_EVENT_ID} |
+| record |
+| check | record action | bookrecording |
+| check | recorded event id | ${RECORDABLE_EVENT_ID} |
+
+!4 Given a series linkable programme, when the programme is series linked, the system books a recording on a Set Top Box.
+| script | (CEF) Recording Fixture | ${LINKABLE_EVENT_ID} |
+| series link |
+| check | record action | bookseriesrecording |
+| check | recorded event id | ${LINKABLE_EVENT_ID} |
+
+!1 Errors Scenarios
+Scenario : Given playing a live playback show, when vwid not found, then a message is displayed
+
+!| script | (CEF) Recording Fixture | ${RECORDABLE_EVENT_ID} |
+| record |
+| http code | 503 | error code | 3701 |
+| check | message | PVR not currently available |
+
+Scenario : Given playing a live playback show, service sid not found, then a message is displayed
+
+!| script | (CEF) Recording Fixture | ${RECORDABLE_EVENT_ID} |
+| record |
+| http code | 500 | error code | 3901 |
+| check | message | The event could not be found |
+
+Scenario : Given playing a live playback show, when can not tune, then a message is displayed
+
+!| script | (CEF) Recording Fixture | ${RECORDABLE_EVENT_ID} |
+| record |
+| http code | 500 | error code | 3902 |
+| check | message | The event could not be booked |
+
+
+
+!1 Display Button Logic
+!4 Given Scheduled recording for event, record button should be hidden.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | SCHEDULED | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | recordButtonVisible | false |
+
+!4 Given currently recording event, record button should be hidden.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | RECORDING | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | recordButtonVisible | false |
+
+!4 Given event is no longer recording or scheduled, record button should be visible.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | RECORDED | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | recordButtonVisible | true |
+
+!4 Given no recording or booking for event, record button should be visible.
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | recordButtonVisible | true |
+
+!4 Given a event is not recordable/bookable, record button should be hidden.
+!| script | (CEF) Recording Fixture | E7d2-e3m1 |
+| check | recordButtonVisible | false |

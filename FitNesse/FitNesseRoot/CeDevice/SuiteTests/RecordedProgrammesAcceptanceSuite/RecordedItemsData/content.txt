@@ -1,0 +1,11 @@
+# Include this table (wiki markup !include <RecordedProgrammesAcceptanceSuite.RecordedItemsData) to load a generic set of Recorded Programmes Data
+
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | ID | Duration |
+| The Cup Football | ITV HD | $NOW | RECORDING | 001 | 300 |
+| 007 James Bond Movie | Sky Movies 007 | 04-01-2014 9:00pm | RECORDED | 002 | 300 |
+| Friend's | Comedy Central | 03-01-2014 2:00pm | PART REC | 003 | 300 |
+| Louie | Comedy Central+1 | 03-01-2014 12:00am | FAILED | 004 | 300 |
+| Build, Buy or Restore? | Quest+1 | 03-01-2014 11:00pm | DOWNLOADING | 005 | 300 |
+| Build, Buy or Restore? | Quest+1 | 03-01-2014 12:00pm | AVAILABLE | 006 | 300 |
+| Celebrity Juice | ITV | $FUTURE | SCHEDULED | 007 | 300 |

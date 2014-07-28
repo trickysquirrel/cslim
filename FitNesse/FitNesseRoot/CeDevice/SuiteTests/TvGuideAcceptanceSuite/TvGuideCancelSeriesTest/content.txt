@@ -1,0 +1,36 @@
+!1 iOS User Story
+Covers the following User Stories related to Grouping
+
+| [[NGDEV-10085][https://www.stb.bskyb.com/jira/browse/NGDEV-10477]] | CE Device - (7167-A) "TV Guide" - Display the channel listing |
+| Test Traceability Notes | As part of Fitnesse tests we cover Acceptance Criteria |
+| As a product owner I want to display the correct recording actions, so that the viewer understands whether they can record or cancel a recording for a programme. |
+
+!4 Given a programme is series recording, on remove series recording, then the system removes the booking for the series and continue with current recording stops on the Set Top Box.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID | link |
+| James Bond | Sky Movies 007 | 1388869200 | RECORDING | 002 | 300 | 129 | 04-01-2014 9:00pm | P290031BA | E7d3-e68b | true |
+
+!| script | (CEF) Recording Fixture | E7d3-e68b |
+| removeseriesrecording |
+| check | record action | seriesunlink |
+
+!1 Display Button Logic
+!4 Given a PVR Item is series linked, remove series recording button should be visible.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID | link |
+| James Bond | Sky Movies 007 | 1388869200 | SCHEDULED | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | E7d3-e3d4 | true |
+
+!| script | (CEF) Recording Fixture | E7d3-e3d4 |
+| check | remove series recording Button Visible | true |
+
+!4 Given a PVR Item is not series linked, remove series recording button should be hidden.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | SCHEDULED | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | remove series recording Button Visible | false |
+
+!4 Given no recording or booking for event, remove series link button should be hidden.
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | remove series recording Button Visible | false |

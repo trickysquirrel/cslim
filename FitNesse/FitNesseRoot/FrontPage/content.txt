@@ -1,0 +1,4 @@
+[[iOS Suite][CeDevice]] (Local)
+[[iOS Suite][http://172.20.124.72:8080/CeDevices.AppleDevices]] (Remote)
+
+!note Release ${FITNESSE_VERSION}

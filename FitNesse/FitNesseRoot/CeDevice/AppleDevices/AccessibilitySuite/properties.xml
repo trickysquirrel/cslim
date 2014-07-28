@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<properties>
+	<Files>true</Files>
+	<Properties>true</Properties>
+	<RecentChanges>true</RecentChanges>
+	<Refactor>true</Refactor>
+	<Search>true</Search>
+	<Suite>true</Suite>
+	<Versions>true</Versions>
+	<WhereUsed>true</WhereUsed>
+	<WikiImport>
+		<AutoUpdate/>
+		<LastRemoteModification>20140425142001</LastRemoteModification>
+		<Source>http://10.65.4.86:8080/CeDevices.AppleDevices.AccessibilitySuite</Source>
+	</WikiImport>
+</properties>

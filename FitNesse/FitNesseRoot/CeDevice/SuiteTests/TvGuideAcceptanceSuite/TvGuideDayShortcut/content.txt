@@ -1,0 +1,129 @@
+!1 User Story
+As a viewer I want the ability to skip to a specific day of the week, so that i can see what programmes are on that day. We always assume that the first day is Today.
+
+!2 
+!2 Day Picker (Device Date and PVR Date Same)
+!4 Given a date on the 1st of Jan 1970, when showing the day picker, then the title of the buttons should be begin from Thursday
+
+!| Ordered query:(CEF) Channel Schedule Day Picker Fixture|$EPOCH|
+|Button Title                                                    |
+|Today                                                           |
+|Friday                                                          |
+|Saturday                                                        |
+|Sunday                                                          |
+|Monday                                                          |
+|Tuesday                                                         |
+|Wednesday                                                       |
+
+!4 Given a date on the 26th of Oct 2014 (BST Day Change), when showing the day picker, then the title of the buttons should begin from Sunday
+
+!| Ordered query:(CEF) Channel Schedule Day Picker Fixture|$BST_CHANGE_DATE|
+|Button Title                                                              |
+|Today                                                                     |
+|Monday                                                                    |
+|Tuesday                                                                   |
+|Wednesday                                                                 |
+|Thursday                                                                  |
+|Friday                                                                    |
+|Saturday                                                                  |
+
+!4 Given a PVR with todays date, and a device in America/Los Angeles, we expect the App to display days relative to time in London
+
+!| Ordered query:(CEF) Channel Schedule Day Picker Fixture|$TODAY|Device Date|$TODAY|TimeZone|PDT|
+|Button Title                                                                         |
+|Today                                                                                |
+|$DAYNAME_TODAY_PLUS_1                                                                |
+|$DAYNAME_TODAY_PLUS_2                                                                |
+|$DAYNAME_TODAY_PLUS_3                                                                |
+|$DAYNAME_TODAY_PLUS_4                                                                |
+|$DAYNAME_TODAY_PLUS_5                                                                |
+|$DAYNAME_TODAY_PLUS_6                                                                |
+
+!4 Given a PVR with Yesterdays date, we expect the App to display days beginning from Yesterday
+
+!| Ordered query:(CEF) Channel Schedule Day Picker Fixture|$YESTERDAY|Device Date|$NOW|
+|Button Title                                                                         |
+|Today                                                                                |
+|$DAYNAME_TODAY_PLUS_0                                                                |
+|$DAYNAME_TODAY_PLUS_1                                                                |
+|$DAYNAME_TODAY_PLUS_2                                                                |
+|$DAYNAME_TODAY_PLUS_3                                                                |
+|$DAYNAME_TODAY_PLUS_4                                                                |
+|$DAYNAME_TODAY_PLUS_5                                                                |
+
+!5 and when selecting Tomorrows date, the 3rd button should be highlighted.
+
+!|script     |(CEF) Channel Schedule Day Picker Highlight Fixture|
+|pvr date    |$YESTERDAY                                         |
+|device date |$NOW                                               |
+|selected day|$TOMORROW                                          |
+|check       |selected day index                |2               |
+
+!4 Given a PVR with the current date, and device with Yesterdays date, we expect the App to display days beginning with the current date.
+
+!| Ordered query:(CEF) Channel Schedule Day Picker Fixture|$NOW|Device Date|$YESTERDAY|
+|Button Title                                                                         |
+|Today                                                                                |
+|$DAYNAME_TODAY_PLUS_1                                                                |
+|$DAYNAME_TODAY_PLUS_2                                                                |
+|$DAYNAME_TODAY_PLUS_3                                                                |
+|$DAYNAME_TODAY_PLUS_4                                                                |
+|$DAYNAME_TODAY_PLUS_5                                                                |
+|$DAYNAME_TODAY_PLUS_6                                                                |
+
+!5 and when selecting Tomorrows date, the 2nd button should be highlighted.
+
+!|script     |(CEF) Channel Schedule Day Picker Highlight Fixture|
+|pvr date    |$NOW                                               |
+|device date |$YESTERDAY                                         |
+|selected day|$TOMORROW                                          |
+|check       |selected day index                |1               |
+
+
+!2 Day Picker (Device Date and PVR Date Different)
+
+!4 Given a PVR with the date 1st Jan 1970, and a device with Tomorrow's date, we expect the App to display days beginning from 1st Jan 1970. (1st Jan 1970 was a Thursday)
+
+!| Ordered query:(CEF) Channel Schedule Day Picker Fixture|$EPOCH|Device Date|$TOMORROW|
+|Button Title                                                                          |
+|Today                                                                                 |
+|Friday                                                                                |
+|Saturday                                                                              |
+|Sunday                                                                                |
+|Monday                                                                                |
+|Tuesday                                                                               |
+|Wednesday                                                                             |
+
+!5 and when selecting Tomorrow's date (outside the range of our 7 days), the 1st button should be highlighted.
+
+!|script     |(CEF) Channel Schedule Day Picker Highlight Fixture|
+|pvr date    |$EPOCH                                             |
+|device date |$YESTERDAY                                         |
+|selected day|$TOMORROW                                          |
+|check       |selected day index                |0               |
+
+
+!3 
+!3 Highlighted Day
+
+!4 Given the following scenarios the correct day should be highlighted.
+
+|script      |(CEF) Channel Schedule Day Picker Highlight Fixture|
+|current day |10-04-2014                                         |
+|selected day|10-04-2014                                         |
+|check       |selected day index                |0               |
+
+|script      |(CEF) Channel Schedule Day Picker Highlight Fixture|
+|current day |08-04-2014                                         |
+|selected day|09-04-2014                                         |
+|check       |selected day index                |1               |
+
+|script      |(CEF) Channel Schedule Day Picker Highlight Fixture|
+|current day |31-05-2014                                         |
+|selected day|05-06-2014                                         |
+|check       |selected day index                |5               |
+
+|script      |(CEF) Channel Schedule Day Picker Highlight Fixture|
+|current day |31-12-2014                                         |
+|selected day|06-01-2015                                         |
+|check       |selected day index                |6               |

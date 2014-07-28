@@ -1,0 +1,92 @@
+!1 iOS User Story
+Covers the following User Stories related to Scheduled Recordings
+
+|comment                                                                                                                                     |
+|[[NGDEV-7559][https://www.stb.bskyb.com/jira/browse/NGDEV-7559]]|CE Device - Scheduled Recordings - View a list of scheduled recording items|
+|Test Traceability Notes                                         |As part of Fitnesse tests we cover most of the Acceptance Criteria         |
+|As a viewer I want to see the list of planned recordings, so that I can check that the programmes I want will be recorded.                  |
+
+!1 Android User Story
+Covers the following User Stories related to Scheduled Recordings
+
+|comment                                                                                                                                     |
+|[[NGDEV-9679][https://www.stb.bskyb.com/jira/browse/NGDEV-9679]]|CE Device - Scheduled Recordings - View a list of scheduled recording items|
+|Test Traceability Notes                                         |As part of Fitnesse tests we cover most of the Acceptance Criteria         |
+|As a viewer I want to see the list of planned recordings, so that I can check that the programmes I want will be recorded.                  |
+
+!3 Scenario : Given recordings, the system only displays programmes that are scheduled to be recorded
+'''Input Data : Recordings'''
+
+!| DT:(BEN) Recordings Builder                                                                     |
+|Title                 |Channel         |Date      |Status     |Channel Number|Readable Date Format|
+|The Cup Football      |ITV HD          |$NOW      |RECORDING  |178           |$NOW                |
+|007 James Bond Movie  |Sky Movies 007  |1388869200|RECORDED   |307           |04-01-2014 9:00pm   |
+|Friend's              |Comedy Central  |1388757600|PART REC   |127           |03-01-2014 2:00pm   |
+|Louie                 |Comedy Central+1|1388707200|FAILED     |128           |03-01-2014 12:00am  |
+|Build, Buy or Restore?|Quest+1         |1388790000|DOWNLOADING|195           |03-01-2014 11:00pm  |
+|Build, Buy or Restore?|Quest+1         |1388750400|AVAILABLE  |195           |03-01-2014 12:00pm  |
+|Celebrity Juice       |ITV             |1388759400|SCHEDULED  |103           |03-01-2014 2:30pm   |
+
+'''Expected Results'''
+
+!| Query:(BEN) List Scheduled Recordings Fixture|
+|Title            |Date               |Channel  |
+|Celebrity Juice  |Fri 3 Jan, 2:30pm  |ITV      |
+
+!3 Scenario : Given recordings, When there are 2 scheduled items to be recorded on different channels, Then the system displays programmes ordered with the earliest scheduled item appearing 1st
+'''Input Data : Recordings'''
+
+!| DT:(BEN) Recordings Builder                                                                     |
+|Title                 |Channel         |Date      |Status     |Channel Number|Readable Date Format|
+|The Cup Football      |ITV HD          |$NOW      |RECORDING  |178           |$NOW                |
+|007 James Bond Movie  |Sky Movies 007  |1388869200|RECORDED   |307           |04-01-2014 9:00pm   |
+|Friend's              |Comedy Central  |1388757600|PART REC   |127           |03-01-2014 2:00pm   |
+|Louie                 |Comedy Central+1|1388707200|FAILED     |128           |03-01-2014 12:00am  |
+|Build, Buy or Restore?|Quest+1         |1388790000|DOWNLOADING|195           |03-01-2014 11:00pm  |
+|Build, Buy or Restore?|Quest+1         |1388750400|AVAILABLE  |195           |03-01-2014 12:00pm  |
+|Friend's              |Comedy Central  |1388757600|SCHEDULED  |127           |03-01-2014 2:00pm   |
+|Celebrity Juice       |ITV             |1388759400|SCHEDULED  |103           |03-01-2014 2:30pm   |
+
+'''Expected Results'''
+
+!| Ordered Query:(BEN) List Scheduled Recordings Fixture|
+|Title             |Date               |Channel         |
+|Friend's          |Fri 3 Jan, 2:00pm  |Comedy Central  |
+|Celebrity Juice   |Fri 3 Jan, 2:30pm  |ITV             |
+
+!3 Scenario : Given recordings, When there are 2 or more Scheduled items to be recorded at the same time, Then the system displays programmes by logical channel number
+'''Input Data : Recordings'''
+
+!| DT:(BEN) Recordings Builder                                                                     |
+|Title                 |Channel         |Date      |Status     |Channel Number|Readable Date Format|
+|The Cup Football      |ITV HD          |$NOW      |RECORDING  |178           |$NOW                |
+|007 James Bond Movie  |Sky Movies 007  |1388869200|RECORDED   |307           |04-01-2014 9:00pm   |
+|Friend's              |Comedy Central  |1388757600|PART REC   |127           |03-01-2014 2:00pm   |
+|Louie                 |Comedy Central+1|1388707200|FAILED     |128           |03-01-2014 12:00am  |
+|Build, Buy or Restore?|Quest+1         |1388790000|DOWNLOADING|195           |03-01-2014 11:00pm  |
+|Build, Buy or Restore?|Quest+1         |1388750400|AVAILABLE  |195           |03-01-2014 12:00pm  |
+|Friend's              |Comedy Central  |1388757600|SCHEDULED  |127           |03-01-2014 2:00pm   |
+|Celebrity Juice       |ITV             |1388757600|SCHEDULED  |103           |03-01-2014 2:00pm   |
+
+'''Expected Results'''
+
+!| Ordered Query:(BEN) List Scheduled Recordings Fixture|
+|Title             |Date               |Channel         |
+|Celebrity Juice   |Fri 3 Jan, 2:00pm  |ITV             |
+|Friend's          |Fri 3 Jan, 2:00pm  |Comedy Central  |
+
+!3 Scenario : Given recordings, the system does not display Scheduled items with non 'LIVE' source
+ * Items with non LIVE source are not displayed.
+
+'''Input Data : Recordings out of Date Order'''
+
+|DT:(BEN) Recordings Builder                                                           |
+|Title  |Channel       |Date      |Status   |Channel Number|source|Readable Date Format|
+|Louie  |Comedy Central|1388757600|SCHEDULED|128           |LIVE  |03-01-2014 2:00pm   |
+|Friends|Comedy Central|1388869200|SCHEDULED|128           |VOD   |04-01-2014 9:00pm   |
+
+'''Expected Results : Programmes ordered by most recent first'''
+
+|Ordered Query:(BEN) List Scheduled Recordings Fixture|
+|Title     |Channel            |Date                  |
+|Louie     |Comedy Central     |Fri 3 Jan, 2:00pm     |

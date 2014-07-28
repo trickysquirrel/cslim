@@ -1,0 +1,11 @@
+!4 Scenario : Given a re-sync occurs when viewing a list of recordings, the view displays the correct items after the re-sync has completed.
+| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | ID | Duration | Channel Number |
+| James Bond | Sky Movies 007 | 04-01-2014 9:00pm | RECORDED | 002 | 300 | 129 |
+
+| script | (BEN) List Recorded Programmes Fixture | James Bond | 129 | Sky Movies 007 |
+| load |
+| check | number of items | 1 |
+| resync Items |
+| check | number of items | 1 |
+| check | inserted row title | James Bond |

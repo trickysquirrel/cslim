@@ -1,0 +1,57 @@
+!| DT: (CEF) Channel Schedule Builder                 |
+|Event Id|Title      |Service Id|Start Time  |Duration|
+|0       |Programme A|6504      |$ZTODAY_0900|3600    |
+|1       |Programme B|6504      |$ZTODAY_1000|3600    |
+|2       |Programme C|6504      |$ZTODAY_1100|3600    |
+
+!4 
+!4 Given browsing the schedule when shows are not recording or scheduled, recording badges are not displayed
+!| Query:(CEF) Channel Schedule Fixture|6504|$ZTODAY_0900|
+|Programme Title                       |Badge            |
+|Programme A                           |blank            |
+|Programme B                           |blank            |
+|Programme C                           |blank            |
+
+!4 Given a schedule when a show is recording, a recording badge is displayed
+|DT:(BEN) Recordings Builder                                              |
+|Original Event ID|ID   |Title      |Status   |Channel Number|Date        |
+|0                |PVR01|Programme A|RECORDING|103           |$ZTODAY_0900|
+
+!| Query:(CEF) Channel Schedule Fixture|6504|$ZTODAY_0900|
+|Programme Title                       |Badge            |
+|Programme A                           |R                |
+|Programme B                           |blank            |
+|Programme C                           |blank            |
+
+!4 Given a schedule when a show in the future is scheduled, a recording badge is displayed
+|DT:(BEN) Recordings Builder                                        |
+|Original Event ID|Title      |Status   |Channel Number|Date        |
+|1                |Programme B|SCHEDULED|103           |$ZTODAY_1000|
+
+!| Query:(CEF) Channel Schedule Fixture|6504|$ZTODAY_0900|
+|Programme Title                       |Badge            |
+|Programme A                           |blank            |
+|Programme B                           |R                |
+|Programme C                           |blank            |
+
+!4 Given a schedule when multiple shows are scheduled, recording badges are displayed
+|DT:(BEN) Recordings Builder                                        |
+|Original Event ID|Title      |Status   |Channel Number|Date        |
+|0                |Programme A|SCHEDULED|103           |$ZTODAY_0900|
+|1                |Programme B|SCHEDULED|103           |$ZTODAY_1000|
+|2                |Programme C|SCHEDULED|103           |$ZTODAY_1100|
+
+!| Query:(CEF) Channel Schedule Fixture|6504|$ZTODAY_0900|
+|Programme Title                       |Badge            |
+|Programme A                           |R                |
+|Programme B                           |R                |
+|Programme C                           |R                |
+
+!4 Given a schedule with no scheduled recordings, when an event begins recording a badge is dynamically displayed
+!| script|(CEF) Channel Schedule Fixture|6504|$ZTODAY_0900|
+|load                                                     |
+|ensure  |row                           |0   |badge |blank|
+|record  |Programme A                                     |
+|ensure  |row                           |0   |badge |R    |
+|cancel  |Programme A                                     |
+|ensure  |row                           |0   |badge |blank|

@@ -1,0 +1,18 @@
+!1 iOS User Story
+Covers the following User Stories related to Home Screen Global Navigation
+
+| Comment|
+| [[NGDEV-7552][https://www.stb.bskyb.com/jira/browse/NGDEV-7552]] | CE Device - Temporary Home - Start of Global Nav |
+| Test Traceability Notes | As part of Fitnesse tests we cover most of the Acceptance Criteria |
+| Temporary home in order to be able to navigate to My Sky+ |
+
+!3 Scenario : Given on the Home screen, when selecting a link, you are taken to the correct destination.
+ * TV Guide, !-MySky+-! should be displayed
+
+| script | (BEN) Home Screen Fixture |
+| select button named | My Sky+ |
+| check | destination | !-My Sky+-! |
+| select button named | TV Guide |
+| check | destination | TV Guide |
+| select button named | Scheduled |
+| check | destination | Scheduled |

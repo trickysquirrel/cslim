@@ -1,0 +1,12 @@
+MYPATH=$(dirname $0)
+SLIM_PORT=$1 
+source ${MYPATH}/env.sh
+
+APP_PID=$(ps auxwww | grep ${PRODUCT_NAME}[.app] | awk '{print $2}')
+
+if [ "$APP_PID" != "" ] ; then
+	echo "Killing Detected Hanging Application ${APP_PID}"
+	kill "$APP_PID"
+fi
+
+"./$MYPATH/ios-sim" launch ${INSTALL_DIR}/${PRODUCT_NAME}.app --family ipad --verbose --exit --args "$SLIM_PORT"

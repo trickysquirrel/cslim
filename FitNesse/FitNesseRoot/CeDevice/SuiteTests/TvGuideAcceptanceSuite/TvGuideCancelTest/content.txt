@@ -1,0 +1,63 @@
+!1 iOS User Story
+Covers the following User Stories related to Grouping
+
+| [[NGDEV-10147][https://www.stb.bskyb.com/jira/browse/NGDEV-10147]] | CE Device - (7167-A) "TV Guide" - Display the channel listing |
+| Test Traceability Notes | As part of Fitnesse tests we cover Acceptance Criteria |
+| As a viewer I want to cancel programmes I have set record so that I don't waste disk space on programmes I don't want to watch. |
+
+!4 Given a programme is recording, on cancel record, then the system stops the recording on the Set Top Box.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | RECORDING | 002 | 300 | 129 | 04-01-2014 9:00pm | P290031BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| cancel |
+| check | record action | cancelrecording |
+
+!4 Given a programme is scheduled, on cancel record, then the system removes the booking on the Set Top Box.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | SCHEDULED | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| cancel |
+| check | record action | erase |
+
+
+
+!1 Errors Scenarios
+Scenario : Given cancelling a recording and an error occurs, display the default error message. 
+
+| script | (CEF) Recording Fixture  | Z7d2-e4bc |
+| cancel |
+| http code  | 500 | error code | |
+| check | message | An unknown error occurred |
+
+!1 Display Button Logic
+!4 Given Scheduled recording for event, cancel button should be visible.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | SCHEDULED | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | cancelButtonVisible | true |
+
+!4 Given currently recording event, cancel button should be visible.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | RECORDING | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | cancelButtonVisible | true |
+
+!4 Given event is no longer recording or scheduled, cancel button should be hidden.
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Epoch Time | Status | ID | Duration | Channel Number | Date | ID | originalEventID |
+| James Bond | Sky Movies 007 | 1388869200 | RECORDED | 002 | 300 | 129 | 04-01-2014 11:00pm | P2900045BA | Z7d2-e4bc |
+
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | cancelButtonVisible | false |
+
+!4 Given no recording or booking for event, cancel button should be hidden.
+!| script | (CEF) Recording Fixture | Z7d2-e4bc |
+| check | cancelButtonVisible | false |

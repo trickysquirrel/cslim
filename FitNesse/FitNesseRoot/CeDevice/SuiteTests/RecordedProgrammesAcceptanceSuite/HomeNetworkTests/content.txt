@@ -1,0 +1,8 @@
+----
+'''Given the following home environments the system behaves as follows:'''
+
+!| (BEN) Box Connectivity Fixture |
+| Connected | Ethan Box | message? |
+| false | true | No set-top box found. |
+| true | false | No set-top box found. |
+| true | true | null |

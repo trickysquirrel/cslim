@@ -1,0 +1,104 @@
+!1 Most Recents - Unwatched Programme - Visual indication
+Scenario : Given Mysky+ has unwatched programmes, a visual indication should be displayed for grouped and standalone programme items.
+
+!1 Android User Story
+| comment |
+| [[NGDEV-11032][https://www.stb.bskyb.com/jira/browse/NGDEV-11032]] | Most Recents - Visual indication for unwatched programme |
+| Test Traceability Notes | As part of Fitnesse tests we cover most of the Acceptance Criteria |
+| As a viewer I want to be able to see at a glance what programmes I have not watched yet, so that I can make a decision what to watch now. |
+
+!2 Scenario : Given the user is on the Most Recents screen, a visual indication should be displayed for a group of recordings containing atleast 1 unwatched item
+ * Display an icon for a group of recordings containing at least 1 unwatched item.
+
+'''Input Data : Recordings'''
+
+| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Readable Date Format | Viewed Position |
+| Friend's | Comedy Central | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | |
+| Friend's | Comedy Central | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | |
+| Friend's | Comedy Central | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | 12345 |
+| Friend's | Comedy Central | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | 10000 |
+| Balanço Geral São Paulo | Spanish TV | 1388707200 | RECORDED | 801 | 03-01-2014 12:00am | 290348924 |
+| Balanço Geral São Paulo | Spanish TV | 1388707200 | RECORDED | 801 | 03-01-2014 12:00am | 947920 |
+| Balanço Geral São Paulo | Spanish TV | 1388707200 | RECORDED | 801 | 03-01-2014 12:00am | 47920284 |
+
+'''Expected Results'''
+
+!| Query:(BEN) Grouped Recorded Programmes Fixture |
+| Title | Items To View |
+| Friend's | true |
+| Balanço Geral São Paulo | false |
+
+!2 Scenario : Given the user is on the Most Recents screen, a visual indication for a standalone recording that is unwatched should be displayed.
+'''Input Data : Recordings'''
+
+ * Display an icon for a standalone recording that is unwatched.
+
+| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Readable Date Format | Viewed Position |
+| Bargain Hunt | BBC One | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | |
+| Britain's Got Talent | ITV 3 | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | 123456789 |
+
+'''Expected Results'''
+
+!| Query:(BEN) Grouped Recorded Programmes Fixture |
+| Title | Items To View |
+| Bargain Hunt | true |
+| Britain's Got Talent | false |
+
+!2 Scenario : Given the user is on the Most Recents screen, a visual indication for a failed recording that is not watchable should not be displayed.
+'''Input Data : Recordings'''
+
+ * Do not display an icon for a failed recording.
+
+| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Readable Date Format | Viewed Position |
+| Britain's Got Talent | ITV 3 | 1388707200 | FAILED | 127 | 03-01-2014 12:00am | |
+
+'''Expected Results'''
+
+!| Query:(BEN) Grouped Recorded Programmes Fixture |
+| Title | Items To View |
+| Britain's Got Talent | false |
+
+!2 Scenario : Given the user is on the Most Recents screen, a visual indication for a grouped failed recordings that is not watchable should not be displayed.
+'''Input Data : Recordings'''
+
+ * Do not display an icon for a failed recording.
+
+| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Readable Date Format | Viewed Position |
+| Britain's Got Talent | ITV 3 | 1388707200 | FAILED | 127 | 03-01-2014 12:00am | |
+| Britain's Got Talent | ITV 3 | 1388707200 | FAILED | 127 | 03-01-2014 12:00am | |
+| Britain's Got Talent | ITV 3 | 1388707200 | FAILED | 127 | 03-01-2014 12:00am | |
+
+'''Expected Results'''
+
+!| Query:(BEN) Grouped Recorded Programmes Fixture |
+| Title | Items To View |
+| Britain's Got Talent | false |
+
+!2 Scenario : Given the user is on the Most Recents screen, a visual recording for a watched item which has been rewinded back to the start after playback (0mins), should not be displayed.
+'''Input Data : Recordings'''
+
+| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Readable Date Format | Viewed Position |
+| Friend's | Comedy Central | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | 0 |
+
+'''Expected Results'''
+
+!| Query:(BEN) Grouped Recorded Programmes Fixture |
+| Title | Items To View |
+| Friend's | false |
+
+!2 Scenario : Given the user is on the Most Recents screen, an group containing an unwatched non 'LIVE' item does not display an unwatched episode indicator. 
+'''Input Data : Recordings'''  
+| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Readable Date Format | Viewed Position | Source |
+| Friend's | Comedy Central | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | 10 | LIVE |
+| Friend's | Comedy Central | 1388707200 | RECORDED | 127 | 03-01-2014 12:00am | | VOD |
+
+ '''Expected Results'''  
+| Query:(BEN) Grouped Recorded Programmes Fixture |
+| Title | Items To View |
+| Friend's | false |

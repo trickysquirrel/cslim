@@ -1,0 +1,10 @@
+[[Services Protocol Reference][https://www.stb.bskyb.com/confluence/display/2016/Application+Middleware+Services+%28AMS%29+Protocol+Reference]]
+
+----
+'''As a user, I want to view TV Guide listings so that I can browse through the channel list.'''
+
+|>TvGuideBrowsingTests   |Specifies behaviour for browsing channel listings and related programmes    |
+|>TvGuidePlaybackTests   |Specifies behaviour for tuning to a channel on the box|
+|>TvChannelsData ||
+
+

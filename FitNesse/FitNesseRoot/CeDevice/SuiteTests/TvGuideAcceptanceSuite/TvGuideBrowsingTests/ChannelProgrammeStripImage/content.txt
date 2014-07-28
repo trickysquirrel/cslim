@@ -1,0 +1,17 @@
+!2 Programme Strip Image - Programme Strip - Currently broadcasting
+Scenario : Given a currently broadcasting item is selected, the programmes image is displayed in the programme strip.
+
+!2 iOS User Story
+|Comment                                                                                                                            |
+|[[NGDEV-8640][https://www.stb.bskyb.com/jira/browse/NGDEV-8640]]|Display image for a linear programme in the Programme Strip       |
+|Test Traceability Notes                                         |As part of Fitnesse tests we cover most of the Acceptance Criteria|
+|As a product owner I want to present images for the TV programmes in the Guide so that the Guide is more visually appealing.       |
+
+!| DT: (CEF) Channel Schedule Builder                                                    |
+|Service Id|Event Id  |UUID                                |Title             |Start Time|
+|6504      |Z7d2-ez98c|be6551c4-8c85-4178-9b5b-39d0e1e7bcc0|Life in the Future|$FUTURE   |
+
+!4 Given programme strip is configured with event with UUID the programmes image should be displayed
+|DT: (CEF) Programme Strip Programme Image Fixture                |Z7d2-ez98c               |
+|displayedImage?                                                                            |
+|!-http://images.metadata.bskyb.com/pd-image/be6551c4-8c85-4178-9b5b-39d0e1e7bcc0/16-9/231-!|

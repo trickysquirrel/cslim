@@ -1,0 +1,169 @@
+!1 Filter the channel list according to Genre
+!1 iOS User Story
+|[[NGDEV-8370][https://www.stb.bskyb.com/jira/browse/NGDEV-8370]]   |Filter the channel list according to Genre                          |
+|Test Traceability Notes                                            |As part of Fitnesse tests we cover most of the Acceptance Criteria  |
+|As a viewer I want to see a subset of channels based on Genre, so that I can easily find the channels and programmes I am interested in.|
+
+!3 Scenario : Given list of Genres, the Genre name should be displayed on the left hand side of the Grid
+ * Genre name should be displayed
+
+'''Expected Results'''
+
+|Ordered Query:(CEF) Genre Name Fixture|
+|Genre                                 |
+|All Channels                          |
+|HD & 3D                               |
+|Entertainment                         |
+|Documentaries                         |
+|Movies                                |
+|Sports                                |
+|News                                  |
+|Kids                                  |
+|Music                                 |
+|Shopping                              |
+|Religion                              |
+|International                         |
+|Gaming                                |
+|Specialist                            |
+|Adult                                 |
+
+!3 Scenario : Given list of Genres, the All Channels Genre should be selected by default (First time use)
+ * All Channels Genre name should be displayed
+
+!| script|(CEF) Genre Name Fixture|
+|wipe user preferences            |
+|load                             |
+|check   |selected  |All Channels |
+
+!3 Scenario: Given 'All Channels' genre filter is selected, all channels are displayed except audio (Radio).
+|DT: (CEF) Channels Builder                                                        |
+|Channel                    |Channel Number|Service Genre|Service Id|Service Format|
+|Entertainment Channel      |142           |12           |2075      |sd            |
+|Lifestyle & Culture Channel|103           |13           |6504      |sd            |
+|Movies Channel             |105           |14           |1801      |sd            |
+|Sports Channel             |104           |15           |1621      |sd            |
+|News Channel               |106           |16           |4061      |sd            |
+|Documentaries Channel      |107           |17           |4066      |sd            |
+|Kids Channel               |108           |18           |3830      |sd            |
+|Music Channel              |109           |19           |3958      |sd            |
+|Shopping Channel           |110           |21           |4000      |sd            |
+|Religion Channel           |111           |22           |4182      |sd            |
+|International Channel      |112           |23           |4256      |sd            |
+|Gaming & Dating Channel    |113           |24           |4320      |sd            |
+|Specialist Channel         |114           |25           |4321      |sd            |
+|Adult Channel              |115           |26           |4322      |sd            |
+|Radio Channel              |914           |20           |4192      |au            |
+|Undefined Channel          |996           |10           |1850      |sd            |
+
+|Query:(CEF) Genre Filter Fixture|All Channels|
+|Channel                                      |
+|Entertainment Channel                        |
+|Lifestyle & Culture Channel                  |
+|Movies Channel                               |
+|Sports Channel                               |
+|News Channel                                 |
+|Documentaries Channel                        |
+|Kids Channel                                 |
+|Music Channel                                |
+|Shopping Channel                             |
+|Religion Channel                             |
+|International Channel                        |
+|Gaming & Dating Channel                      |
+|Specialist Channel                           |
+|Adult Channel                                |
+|Undefined Channel                            |
+
+!3 Scenario: Given 'Entertainment' genre filter is selected, only channels with entertainment genre are displayed.
+|DT: (CEF) Channels Builder                                                        |
+|Channel                    |Channel Number|Service Genre|Service Id|Service Format|
+|Entertainment Channel      |142           |12           |2075      |sd            |
+|Lifestyle & Culture Channel|103           |13           |6504      |sd            |
+|Movies Channel             |105           |14           |1801      |sd            |
+|Sports Channel             |104           |15           |1621      |sd            |
+|News Channel               |106           |16           |4061      |sd            |
+|Documentaries Channel      |107           |17           |4066      |sd            |
+|Kids Channel               |108           |18           |3830      |sd            |
+|Music Channel              |109           |19           |3958      |sd            |
+|Shopping Channel           |110           |21           |4000      |sd            |
+|Religion Channel           |111           |22           |4182      |sd            |
+|International Channel      |112           |23           |4256      |sd            |
+|Gaming & Dating Channel    |113           |24           |4320      |sd            |
+|Specialist Channel         |114           |25           |4321      |sd            |
+|Adult Channel              |115           |26           |4322      |sd            |
+|Radio Channel              |914           |20           |4192      |au            |
+|Undefined Channel          |996           |10           |1850      |au            |
+
+|Query:(CEF) Genre Filter Fixture|Entertainment|
+|Channel                                       |
+|Entertainment Channel                         |
+
+!3 Scenario: Given 'Movies' genre filter is selected, only channels with Movies genre are displayed.
+|DT: (CEF) Channels Builder                                                        |
+|Channel                    |Channel Number|Service Genre|Service Id|Service Format|
+|Entertainment Channel      |142           |12           |2075      |sd            |
+|Lifestyle & Culture Channel|103           |13           |6504      |sd            |
+|Movies Channel             |105           |14           |1801      |sd            |
+|Sports Channel             |104           |15           |1621      |sd            |
+|News Channel               |106           |16           |4061      |sd            |
+|Documentaries Channel      |107           |17           |4066      |sd            |
+|Kids Channel               |108           |18           |3830      |sd            |
+|Music Channel              |109           |19           |3958      |sd            |
+|Shopping Channel           |110           |21           |4000      |sd            |
+|Religion Channel           |111           |22           |4182      |sd            |
+|International Channel      |112           |23           |4256      |sd            |
+|Gaming & Dating Channel    |113           |24           |4320      |sd            |
+|Specialist Channel         |114           |25           |4321      |sd            |
+|Adult Channel              |115           |26           |4322      |sd            |
+|Radio Channel              |914           |20           |4192      |au            |
+|Undefined Channel          |996           |10           |1850      |au            |
+
+|Query:(CEF) Genre Filter Fixture|Movies|
+|Channel                                |
+|Movies Channel                         |
+
+!3 Scenario: Given 'HD, 4K & 3D' genre filter is selected, channels with HD & 3D from all genres should be displayed.
+|DT: (CEF) Channels Builder                                                           |
+|Channel                       |Channel Number|Service Genre|Service Id|Service Format|
+|Entertainment HD Channel      |142           |12           |2075      |hd            |
+|Lifestyle & Culture HD Channel|103           |13           |6504      |hd            |
+|Movies 4K Channel             |105           |14           |1801      |4k            |
+|Sports HD Channel             |104           |15           |1621      |hd            |
+|News HD Channel               |106           |16           |4061      |hd            |
+|Documentaries 3D Channel      |107           |17           |4066      |hd            |
+|Kids 3D Channel               |108           |18           |3830      |hd            |
+|Music 3D Channel              |109           |19           |3958      |hd            |
+|Shopping HD Channel           |110           |21           |4000      |hd            |
+|Religion HD Channel           |111           |22           |4182      |hd            |
+|International Channel         |112           |23           |4256      |sd            |
+|Gaming & Dating Channel       |113           |24           |4320      |sd            |
+|Specialist Channel            |114           |25           |4321      |sd            |
+|Adult Channel                 |115           |26           |4322      |sd            |
+|Radio Channel                 |914           |20           |4192      |au            |
+|Undefined Channel             |996           |10           |1850      |au            |
+
+|Query:(CEF) Genre Filter Fixture|HD & 3D|
+|Channel                                 |
+|Entertainment HD Channel                |
+|Lifestyle & Culture HD Channel          |
+|Movies 4K Channel                       |
+|Sports HD Channel                       |
+|News HD Channel                         |
+|Documentaries 3D Channel                |
+|Kids 3D Channel                         |
+|Music 3D Channel                        |
+|Shopping HD Channel                     |
+|Religion HD Channel                     |
+
+!3 Scenario : The last selected filter is always remembered
+ * Exiting/ Killing/ Locking the app & re-launching should remember the last Genre selected
+
+!| script   |(CEF) Genre Name Fixture|
+|load                                |
+|wipe user preferences               |
+|selectGenre|Sports                  |
+|note       |we left application     |
+
+!| script|(CEF) Genre Name Fixture|
+|load                             |
+|check   |selected     |Sports    |
+|wipe user preferences            |

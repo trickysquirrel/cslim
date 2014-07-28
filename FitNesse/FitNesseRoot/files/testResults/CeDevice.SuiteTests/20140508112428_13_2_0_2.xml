@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20140201</FitNesseVersion>
+  <rootPath>CeDevice.SuiteTests</rootPath>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.HomeScreenAcceptanceSuite.HomeScreenBrowsingTests.HomeScreenLinks</name>
+    <date>05/08/2014 11:24:28</date>
+    <pageHistoryLink>CeDevice.SuiteTests.HomeScreenAcceptanceSuite.HomeScreenBrowsingTests.HomeScreenLinks?pageHistory&amp;resultDate=20140508112428</pageHistoryLink>
+    <counts>
+      <right>3</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>82</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.GroupedPvrItems</name>
+    <date>05/08/2014 11:24:28</date>
+    <pageHistoryLink>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.GroupedPvrItems?pageHistory&amp;resultDate=20140508112428</pageHistoryLink>
+    <counts>
+      <right>86</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>557</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.NoRecordingsErrorMessagePage</name>
+    <date>05/08/2014 11:24:29</date>
+    <pageHistoryLink>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.NoRecordingsErrorMessagePage?pageHistory&amp;resultDate=20140508112429</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <runTimeInMillis>67</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.PvrItemListBrowsing</name>
+    <date>05/08/2014 11:24:29</date>
+    <pageHistoryLink>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.PvrItemListBrowsing?pageHistory&amp;resultDate=20140508112429</pageHistoryLink>
+    <counts>
+      <right>45</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>150</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.ScheduledRecordingsListBrowsing</name>
+    <date>05/08/2014 11:24:29</date>
+    <pageHistoryLink>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.ScheduledRecordingsListBrowsing?pageHistory&amp;resultDate=20140508112429</pageHistoryLink>
+    <counts>
+      <right>15</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>128</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.VisualIndicationForUnwatchedProgrammes</name>
+    <date>05/08/2014 11:24:29</date>
+    <pageHistoryLink>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.VisualIndicationForUnwatchedProgrammes?pageHistory&amp;resultDate=20140508112429</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>6</wrong>
+      <ignores>0</ignores>
+      <exceptions>13</exceptions>
+    </counts>
+    <runTimeInMillis>115</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.HomeNetworkTests</name>
+    <date>05/08/2014 11:24:30</date>
+    <pageHistoryLink>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.HomeNetworkTests?pageHistory&amp;resultDate=20140508112430</pageHistoryLink>
+    <counts>
+      <right>3</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>49</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.PlaybackTests</name>
+    <date>05/08/2014 11:24:30</date>
+    <pageHistoryLink>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.PlaybackTests?pageHistory&amp;resultDate=20140508112430</pageHistoryLink>
+    <counts>
+      <right>14</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>102</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.SyncRecordingTests</name>
+    <date>05/08/2014 11:24:30</date>
+    <pageHistoryLink>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.SyncRecordingTests?pageHistory&amp;resultDate=20140508112430</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>18</exceptions>
+    </counts>
+    <runTimeInMillis>71</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelListings</name>
+    <date>05/08/2014 11:24:30</date>
+    <pageHistoryLink>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelListings?pageHistory&amp;resultDate=20140508112430</pageHistoryLink>
+    <counts>
+      <right>11</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>202</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStrip</name>
+    <date>05/08/2014 11:24:30</date>
+    <pageHistoryLink>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStrip?pageHistory&amp;resultDate=20140508112430</pageHistoryLink>
+    <counts>
+      <right>16</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>258</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStripBadges</name>
+    <date>05/08/2014 11:24:30</date>
+    <pageHistoryLink>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStripBadges?pageHistory&amp;resultDate=20140508112430</pageHistoryLink>
+    <counts>
+      <right>128</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>368</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStripBadgesOrdering</name>
+    <date>05/08/2014 11:24:31</date>
+    <pageHistoryLink>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStripBadgesOrdering?pageHistory&amp;resultDate=20140508112431</pageHistoryLink>
+    <counts>
+      <right>9</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>233</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelSchedule</name>
+    <date>05/08/2014 11:24:31</date>
+    <pageHistoryLink>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelSchedule?pageHistory&amp;resultDate=20140508112431</pageHistoryLink>
+    <counts>
+      <right>50</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>242</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideDayShortcut</name>
+    <date>05/08/2014 11:24:31</date>
+    <pageHistoryLink>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideDayShortcut?pageHistory&amp;resultDate=20140508112431</pageHistoryLink>
+    <counts>
+      <right>65</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>285</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuidePlaybackTests</name>
+    <date>05/08/2014 11:24:31</date>
+    <pageHistoryLink>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuidePlaybackTests?pageHistory&amp;resultDate=20140508112431</pageHistoryLink>
+    <counts>
+      <right>11</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>253</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideRecordingTests</name>
+    <date>05/08/2014 11:24:32</date>
+    <pageHistoryLink>CeDevice.SuiteTests.TvGuideAcceptanceSuite.TvGuideRecordingTests?pageHistory&amp;resultDate=20140508112432</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>24</exceptions>
+    </counts>
+    <runTimeInMillis>205</runTimeInMillis>
+  </pageHistoryReference>
+    <finalCounts>
+    <right>13</right>
+    <wrong>2</wrong>
+    <ignores>0</ignores>
+    <exceptions>2</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>4257</totalRunTimeInMillis>
+
+</suiteResults>
+

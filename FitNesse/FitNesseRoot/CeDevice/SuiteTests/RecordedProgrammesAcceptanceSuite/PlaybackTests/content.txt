@@ -1,0 +1,50 @@
+!lastmodified
+!include -seamless <RecordedProgrammesAcceptanceSuite.RecordedItemsData
+!1 Playback Behaviour
+Scenario : Given playing a recorded show, it should play from the beginning
+
+!| script | (BEN) Box Recorded Playback Fixture |
+| play item | 001 |
+| check | played | 001 |
+| check | position | 0 |
+| play item | 002 |
+| check | played | 002 |
+| check | position | 0 |
+| play item | 003 |
+| check | played | 003 |
+| check | position | 0 |
+
+Scenario : Given playing a recorded show, when I play again after watching something else, then it plays again from the beginning
+
+!| script | (BEN) Box Recorded Playback Fixture |
+| play item | 001 |
+| check | position | 0 |
+| play item | 002 |
+| play item | 001 |
+| check | played | 001 |
+| check | position | 0 |
+
+Scenario : Given playing several recorded shows, they should all play
+
+!| script | (BEN) Box Recorded Playback Fixture |
+| play item | 001 |
+| check | played | 001 |
+| play item | 002 |
+| check | played | 002 |
+| play item | 003 |
+| check | played | 003 |
+
+!1 Errors Scenarios
+Scenario : Given playing a recorded show, when it does not exist, then a message is displayed
+
+!| script | (BEN) Box Recorded Playback Fixture |
+| play item | 002 |
+| error code | 3202 |
+| check | message | Item could not be found |
+
+Scenario : Given playing a recorded show, when an unspecified error occurs, then a message is displayed
+
+!| script | (BEN) Box Recorded Playback Fixture |
+| play item | 001 |
+| error code | 3206 |
+| check | message | An unknown device error occurred |

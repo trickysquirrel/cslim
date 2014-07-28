@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<properties>
+	<Files>true</Files>
+	<Properties>true</Properties>
+	<RecentChanges>true</RecentChanges>
+	<Refactor>true</Refactor>
+	<Search>true</Search>
+	<Suite>true</Suite>
+	<Versions>true</Versions>
+	<WhereUsed>true</WhereUsed>
+	<WikiImport>
+		<LastRemoteModification>20140311121733</LastRemoteModification>
+		<Source>http://ci:8080/CeDeviceTests.SuiteTests.HomeScreenAcceptanceSuite</Source>
+	</WikiImport>
+</properties>

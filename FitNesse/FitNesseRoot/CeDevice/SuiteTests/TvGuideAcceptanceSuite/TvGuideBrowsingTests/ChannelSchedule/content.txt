@@ -1,0 +1,124 @@
+!1 User Story
+As a viewer I want to see the list of TV channels and the programmes that I can watch now on each channel, so that I can easily choose something to watch immediately.
+
+!4 Schedule Browsing Today
+Given the programme data, when showing ITV for Today, then the Programme Title, Start Time, Duration of the programme for 24 hours should be displayed
+
+!| Ordered query:(CEF) Channel Schedule Fixture|6504      |$TODAY          |
+|Programme Title                               |Start Time|Duration seconds|
+|Uefa Champions League Highlights              |11:00pm   |1hr 28m         |
+|Budget 2014                                   |12:30am   |9hrs 30m        |
+|ITV News                                      |10:00am   |2hrs            |
+|The Chase                                     |12:00pm   |1hr             |
+|Emmerdale                                     |1:00pm    |4hrs            |
+|Coronation Street                             |5:00pm    |5hrs            |
+|Law & Order UK                                |10:00pm   |30m             |
+|This Morning                                  |10:30pm   |2hrs            |
+
+!4 Schedule Browsing Today on a different channel
+Given the programme data, when showing channel 'Sky Living HD' for Today, then the Programme Title, Start Time, Duration of the programme for 24 hours should be displayed
+
+!| Ordered Query:(CEF) Channel Schedule Fixture|4066      |$TODAY          |
+|Programme Title                               |Start Time|Duration seconds|
+|Criminal Minds                                |12:00am   |10hrs           |
+|Nothing to Declare                            |10:00am   |2hrs            |
+|Sun Sea and A&E                               |12:00pm   |1hr             |
+|CSI : Crime Scene                             |1:00pm    |4hrs            |
+|Coronation Street                             |5:00pm    |5hrs            |
+|Law & Order UK                                |10:00pm   |1hr 20m         |
+|This Morning                                  |11:00pm   |30m             |
+
+!4 Schedule Browsing Today at 13:00
+Given the programme data, when showing ITV for Today at 13:00, then the Programme Title, Start Time, Duration of the programme for 13:00 and onwards, should be displayed
+
+!| Ordered query:(CEF) Channel Schedule Fixture|6504      |$ZTODAY_1300    |
+|Programme Title                               |Start Time|Duration seconds|
+|Emmerdale                                     |1:00pm    |4hrs            |
+|Coronation Street                             |5:00pm    |5hrs            |
+|Law & Order UK                                |10:00pm   |30m             |
+|This Morning                                  |10:30pm   |2hrs            |
+
+
+!4 Schedule Browsing Today at 13:30
+Given the programme data, when showing ITV for Today at 13:30, then the Programme Title, Start Time, Duration of the programme for 13:00 and onwards, should be displayed
+
+!| Ordered query:(CEF) Channel Schedule Fixture|6504      |$ZTODAY_1330    |
+|Programme Title                               |Start Time|Duration seconds|
+|Emmerdale                                     |1:00pm    |4hrs            |
+|Coronation Street                             |5:00pm    |5hrs            |
+|Law & Order UK                                |10:00pm   |30m             |
+|This Morning                                  |10:30pm   |2hrs            |
+
+!4 Schedule Browsing a channel with a programme which overlaps the entire day 
+
+!| Ordered Query:(CEF) Channel Schedule Fixture|1850      |$TODAY          |
+|Programme Title                               |Start Time|Duration seconds|
+|Live House of Commons                         |11:00pm   |26hrs           |
+
+!4 Schedule Browsing Tomorrow
+Given the programme data, when showing ITV for Tomorrow, then the Programme Title, Start Time, Duration of the programme for 24 hours should be displayed
+
+!| Ordered query:(CEF) Channel Schedule Fixture|6504      |$TOMORROW       |
+|Programme Title                               |Start Time|Duration seconds|
+|This Morning                                  |10:30pm   |2hrs            |
+|Tomorrow People                               |12:00am   |30m             |
+|Pepper Pig                                    |12:30am   |30m             |
+
+!4 Schedule Browsing the day after Tomorrow
+Given the programme data, when showing 'Sky Living HD' in 2 days time, then the Programme Title, Start Time, Duration of the programme for 24 hours should be displayed
+!| Ordered query:(CEF) Channel Schedule Fixture|4066      |$DAY_AFTER_TOMORROW|
+|Programme Title                               |Start Time|Duration seconds   |
+|Mr Ben                                        |10:00am   |1hr                |
+|Moomins                                       |11:00am   |1hr                |
+|The Zero Minute Show                          |12:00pm   |0m                 |
+
+!3 Timezone Scenarios
+http://www.timeanddate.com/time/change/uk/london
+
+!4 Schedule Browsing Today when in Europe/Paris
+Given the programme data, when showing channel 'Sky Living HD' for Today, given the Device is in Europe/Paris then times our displayed in Europe/London times.
+
+!| Ordered Query:(CEF) Channel Schedule Fixture|4066      |$TODAY|device timezone|CET|
+|Programme Title                               |Start Time|Duration seconds          |
+|Criminal Minds                                |12:00am   |10hrs                     |
+|Nothing to Declare                            |10:00am   |2hrs                      |
+|Sun Sea and A&E                               |12:00pm   |1hr                       |
+|CSI : Crime Scene                             |1:00pm    |4hrs                      |
+|Coronation Street                             |5:00pm    |5hrs                      |
+|Law & Order UK                                |10:00pm   |1hr 20m                   |
+|This Morning                                  |11:00pm   |30m                       |
+
+!4 Schedule Browsing when BST ends in 2014
+Given programme data during the early hours of 26th October, 2014, then the Start time should be displayed correctly when Daylight Saving Time Ends.
+
+!| DT:(CEF) Channel Schedule Builder                                                                 |
+|Service Id|Title                                       |Start Time                         |Duration|
+|6504      |Midnight Cowboy                             |$ZBST_CHANGE_DATE_0000             |3600    |
+|6504      |The End of Summer Time Party Live           |$ZBST_CHANGE_DATE_0100             |3600    |
+|6504      |The End of Summer Time Party Live Bonus Hour|$ZBST_CHANGE_DATE_END_OF_SUMMERTIME|3600    |
+|6504      |Donny Darko                                 |$ZBST_CHANGE_DATE_0200             |3600    |
+|6504      |Dark Skies                                  |$ZBST_CHANGE_DATE_0300             |3600    |
+
+!| Ordered query:(CEF) Channel Schedule Fixture|6504      |$BST_CHANGE_DATE|
+|Programme Title                               |Start Time|Duration seconds|
+|Midnight Cowboy                               |12:00am   |1hr             |
+|The End of Summer Time Party Live             |1:00am    |1hr             |
+|The End of Summer Time Party Live Bonus Hour  |1:00am    |1hr             |
+|Donny Darko                                   |2:00am    |1hr             |
+|Dark Skies                                    |3:00am    |1hr             |
+
+!4 
+!4 Error Scenarios
+Scenario : Given loading a schedule, when errors occur, then a message is displayed
+
+|script   |(CEF) Data Loading Error Fixture                  |
+|http code|404    |error code              |2001             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|500    |error code              |2002             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|503    |error code              |2003             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|400    |error code              |2004             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|200    |error code              |                 |
+|check    |message|null                                      |

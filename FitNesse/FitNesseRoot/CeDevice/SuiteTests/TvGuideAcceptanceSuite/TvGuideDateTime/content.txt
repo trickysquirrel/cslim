@@ -1,0 +1,20 @@
+!3 Date & Time
+
+!4 Given a device date/time and a PVR date/time, check that the offset is correctly calculated
+|DT:(CEF) Date Time Fixture                                                          |
+|# comment                             |device date |pvr date    |device time offset?|
+|CE Device is behind the PVR           |$ZTODAY_1900|$ZTODAY_2100|~=7200.00          |
+|CE Device has the same time as the PVR|$ZTODAY_1830|$ZTODAY_1830|~=0.00             |
+|CE Device is ahead of the PVR         |$ZTODAY_2130|$ZTODAY_1100|~=-37800.00        |
+
+!4 Given a device date/time of 21:30 today, and a PVR date/time of 11:00 today, check that the date/time it will use to determine what's on now, is the same as the PVR's date/time.
+|DT:(CEF) Date Time Fixture                                         |
+|device date |pvr date    |date time to seek now playing programmes?|
+|$ZTODAY_2130|$ZTODAY_1100|$ZTODAY_1100                             |
+
+!4 Given a device in different timezones, and a PVR date/time at 18:00 in London, check that the the date/time it will use to determine what's on now, is the same as the PVR's date/time.
+|DT:(CEF) Date Time Fixture                                                                            |
+|# comment                                   |device date |device timezone|pvr date    |formatted time?|
+|CE Device has the same time in London       |$ZTODAY_1000|BST            |$ZTODAY_1800|6:00pm         |
+|CE Device has the same time in San Francisco|$ZTODAY_1000|PDT            |$ZTODAY_1800|6:00pm         |
+|CE Device has the same time in Amsterdam    |$ZTODAY_1000|CET            |$ZTODAY_1800|6:00pm         |

@@ -1,0 +1,23 @@
+!1 Most Recents - Empty PVR listing
+Scenario : Given Mysky+ has no recordings, "You have no recordings" message is displayed
+
+!1 Android User Story
+Covers the following User Stories related to Scheduled Recordings
+
+|comment                                                                                                                            |
+|[[NGDEV-9698][https://www.stb.bskyb.com/jira/browse/NGDEV-9698]]|CE Device - Most Recents - Empty PVR listing                      |
+|Test Traceability Notes                                         |As part of Fitnesse tests we cover most of the Acceptance Criteria|
+|As a product manager I do want to show a notification that there are no PVR items to display                                       |
+
+'''Input Data : Recordings'''
+
+!| DT:(BEN) Recordings Builder                                |
+|Title|Channel|Date|Status|Channel Number|Readable Date Format|
+|     |       |    |      |              |                    |
+
+
+'''Expected Results'''
+
+|Query: (BEN) Grouped Recorded Programmes Fixture|
+|Message                                         |
+|You currently have no recordings                |

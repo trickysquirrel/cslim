@@ -1,0 +1,91 @@
+!3 User Story
+[[Jira Ticket 5938][https://www.stb.bskyb.com/jira/browse/NGDEV-5938]] View a list of recordings for a given grouped programme[[Jira Ticket 7103][https://www.stb.bskyb.com/jira/browse/NGDEV-7103]] Content Action Page - Multiple Episodes
+
+!3 Acceptance Criteria
+!4 Scenario : Given recordings, the system only displays programmes that are currently recording or have been recorded or failed to record
+ * Programmes with Status Recording Should be displayed
+ * Programmes with Status Recorded Should be displayed
+ * Programmes with Status Part Recorded Should be displayed
+ * Programmes with Status Failed Should be displayed
+ * Programmes with Status Scheduled Should '''Not''' be displayed
+ * Programmes with Status Available Should '''Not''' be displayed
+ * Programmes with Status Downloaded Should '''Not''' be displayed
+
+''Input Data : Recordings with all possible statuses''
+
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Synopsis | Duration Seconds |
+| Louie | Comedy Central +1 | $NOW | RECORDING | 128 | Valid Louie Synopsis | 600 |
+| Louie | Comedy Central +1 | 04-01-2014 9:00pm| RECORDED | 128 | Valid Louie Synopsis | 1200 |
+| Louie | Comedy Central +1 | 03-01-2014 2:00pm | PART REC | 128 | Valid Louie Synopsis | 1800 |
+| Louie | Comedy Central +1 | 03-01-2014 12:00am | FAILED | 128 | Valid Louie Synopsis | 2400 |
+| Louie | Comedy Central +1 | 03-01-2014 12:00am | AVAILABLE | 128 | Valid Louie Synopsis | 3000 |
+| Louie | Comedy Central +1 | 03-01-2014 12:00am | DOWNLOADED | 128 | Valid Louie Synopsis | 3600 |
+| Louie | Comedy Central +1 | $FUTURE | SCHEDULED | 128 | Valid Louie Synopsis | 13200 |
+| Louie | Comedy Central | 04-01-2014 9:00pm | RECORDED | 999 | Valid Louie Synopsis | 3000 |
+| Top Gear | Comedy Central +1 | 04-01-2014 9:00pm | RECORDED | 128 | Valid Top Gear Synopsis | 3010 |
+
+'''Expected Results'''
+
+!| Query:(BEN) List Recorded Programmes Fixture | Louie | 128 | Comedy Central +1 |
+| Title | Channel | Date | Synopsis | Duration |
+| Louie | Comedy Central +1 | =~/Today/ | Valid Louie Synopsis | 10m |
+| Louie | Comedy Central +1 | Sat 4 Jan, 9:00pm | Valid Louie Synopsis | 20m |
+| Louie | Comedy Central +1 | Fri 3 Jan, 2:00pm | Valid Louie Synopsis | 30m |
+| Louie | Comedy Central +1 | Fri 3 Jan, 12:00am | Valid Louie Synopsis | 40m |
+
+----
+!4 Scenario : Given recordings, the system displays programmes by date descending (e.g. most recently recorded first)
+ * Most recent recorded items should appear at the top of the list
+
+'''Input Data : Recordings out of Date Order'''
+
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Synopsis | Duration Seconds |
+| Louie | Comedy Central | $NOW | PART REC | 128 | Valid Louie Synopsis | 3600 |
+| Louie | Comedy Central | 03-01-2014 2:00pm | RECORDED | 128 | Valid Louie Synopsis | 4500 |
+| Louie | Comedy Central | 04-01-2014 9:00pm | RECORDED | 128 | Valid Louie Synopsis | 180900 |
+
+'''Expected Results : Programmes ordered by most recent first'''
+
+| Ordered Query:(BEN) List Recorded Programmes Fixture | Louie | 128 | Comedy Central |
+| Title | Channel | Date | Synopsis | Duration |
+| Louie | Comedy Central | =~/Today/ | Valid Louie Synopsis | 1hr |
+| Louie | Comedy Central | Sat 4 Jan, 9:00pm | Valid Louie Synopsis | 50hrs 15m |
+| Louie | Comedy Central | Fri 3 Jan, 2:00pm | Valid Louie Synopsis | 1hr 15m |
+
+!4 Scenario : Given recordings, the system does not display items marked as deleted
+ * Most recent recorded items should appear at the top of the list
+
+'''Input Data : Recordings out of Date Order'''
+
+!| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Synopsis | Duration Seconds | Deleted |
+| Louie | Comedy Central | $NOW | PART REC | 128 | Valid Louie Synopsis | 3600 | false |
+| Louie | Comedy Central | 03-01-2014 2:00pm | RECORDED | 128 | Valid Louie Synopsis | 4500 | true |
+| Louie | Comedy Central | 04-01-2014 9:00pm | RECORDED | 128 | Valid Louie Synopsis | 180900 | false |
+
+'''Expected Results : Programmes ordered by most recent first'''
+
+| Ordered Query:(BEN) List Recorded Programmes Fixture | Louie | 128 | Comedy Central |
+| Title | Channel | Date | Synopsis | Duration |
+| Louie | Comedy Central | =~/Today/ | Valid Louie Synopsis | 1hr |
+| Louie | Comedy Central | Sat 4 Jan, 9:00pm | Valid Louie Synopsis | 50hrs 15m |
+
+
+
+!4 Scenario : Given recordings, the system does not display items with non 'LIVE' source
+ * Items with non LIVE source are not displayed.
+
+ '''Input Data : Recordings out of Date Order''' 
+
+| DT:(BEN) Recordings Builder |
+| Title | Channel | Date | Status | Channel Number | Synopsis | Duration Seconds | source |
+| Louie | Comedy Central | 03-01-2014 2:00pm | RECORDED | 128 | Valid Louie Synopsis | 4500 | LIVE |
+| Louie | Comedy Central | 04-01-2014 9:00pm | RECORDED | 128 | Valid Louie Synopsis | 180900 | VOD |
+
+'''Expected Results : Programmes ordered by most recent first'''
+
+| Ordered Query:(BEN) List Recorded Programmes Fixture | Louie | 128 | Comedy Central |
+| Title | Channel | Synopsis | Duration |
+| Louie | Comedy Central | Valid Louie Synopsis | 1hr 15m |

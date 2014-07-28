@@ -1,0 +1,15 @@
+Error Scenarios
+
+Scenario : Given loading a schedule, when errors occur, then a message is displayed
+
+| script | (CEF) Data Loading Error Fixture |
+| http code | 404 | error code | 2001 |
+| check | message | Failed to load data from your set-top box. |
+| http code | 500 | error code | 2002 |
+| check | message | Failed to load data from your set-top box. |
+| http code | 503 | error code | 2003 |
+| check | message | Failed to load data from your set-top box. |
+| http code | 400 | error code | 2004 |
+| check | message | Failed to load data from your set-top box. |
+| http code | 200 | error code | |
+| check | message | null |

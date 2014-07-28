@@ -1,0 +1,65 @@
+''Channels Input Data''
+
+!| DT: (CEF) Channels Builder                                        |
+|Channel      |Channel Number|Service Genre|Service Id|Service Format|
+|Babestation  |906           |12           |1409      |sd            |
+|BBC Two HD   |142           |12           |2075      |hd            |
+|ITV          |103           |12           |6504      |sd            |
+|Channel 5    |105           |12           |1801      |sd            |
+|Channel 4    |104           |12           |1621      |sd            |
+|Sky 1 HD     |106           |12           |4061      |hd            |
+|Sky Living HD|107           |12           |4066      |4k            |
+|Gay Network  |872           |12           |3606      |sd            |
+|Heart        |0111          |20           |3830      |au            |
+|Climax       |914           |20           |4192      |au            |
+|BBC One      |101           |12           |2002      |sd            |
+|Chl Line-up  |996           |10           |1850      |au            |
+
+!| DT: (CEF) Channel Schedule Builder                                                                                                                                                                                                      |
+|Service Id|Event Id |Title                           |Start Time              |Synopsis                                              |Duration|Subtitle|Audio Description|Age Rating|Audio Type|HD  |Widescreen|Recordable|Series Linkable|
+|6504      |Z7d2-e4bc|Life in the Future              |$FUTURE                 |                                                      |0       |true    |true             |U         |M         |true|true      |true      |               |
+|6504      |Z7d2-e79c|Life in the HD Future           |$FUTURE                 |                                                      |0       |        |                 |U         |M         |true|          |true      |               |
+|6504      |E7d2-e4ad|In the Future                   |$ZTOMORROW_PLUS_DAY_1100|                                                      |0       |true    |true             |U         |M         |true|true      |true      |               |
+|6504      |E7d2-e3m2|Tomorrow People                 |$ZTOMORROW_0000         |                                                      |1800    |        |                 |PG        |S         |    |          |true      |               |
+|6504      |E7d2-e3m3|Pepper Pig                      |$ZTOMORROW_0030         |                                                      |1800    |        |                 |12        |DS        |    |          |true      |true           |
+|6504      |E11q-e6xp|Dora The Explorer               |$ZTODAY_1300            |                                                      |14400   |        |                 |          |DS        |    |          |true      |true           |
+|6504      |E7d2-e3af|Budget 2014                     |$ZTODAY_0030            |                                                      |34200   |        |                 |15        |DD        |    |          |true      |               |
+|6504      |E7d2-e3ag|ITV News                        |$ZTODAY_1000            |                                                      |7200    |        |                 |18        |M         |    |          |true      |true           |
+|6504      |E7d2-e3dd|The Chase                       |$ZTODAY_1200            |                                                      |3600    |true    |true             |          |S         |    |          |true      |true           |
+|6504      |E7d2-e3xx|Emmerdale                       |$ZTODAY_1300            |                                                      |14400   |        |                 |          |DS        |    |          |true      |true           |
+|6504      |E7d2-e3ww|Coronation Street               |$ZTODAY_1700            |Will Tyrone resist Maria? Rita receives news of Dennis|18000   |        |                 |          |DD        |    |          |true      |true           |
+|6504      |E7d2-e3b0|Law & Order UK                  |$ZTODAY_2200            |                                                      |1800    |true    |true             |18        |M         |true|true      |true      |               |
+|6504      |E7d2-e3m1|This Morning                    |$ZTODAY_2230            |                                                      |7200    |        |                 |          |S         |    |          |          |               |
+|6504      |E7d2-e58c|Uefa Champions League Highlights|$ZYESTERDAY_2300        |                                                      |5300    |true    |true             |15        |DS        |true|true      |          |               |
+|6504      |E7d2-e3ae|Ancient History                 |$PAST                   |                                                      |0       |true    |true             |PG        |DD        |true|true      |          |               |
+|4066      |E7d3-e3d4|The Zero Minute Show            |$ZTOMORROW_PLUS_DAY_1200|                                                      |0       |        |                 |          |M         |    |          |          |true           |
+|4066      |E7d3-e4ce|Mr Ben                          |$ZTOMORROW_PLUS_DAY_1000|                                                      |3600    |        |                 |          |S         |    |          |          |true           |
+|4066      |E7d3-e4de|Moomins                         |$ZTOMORROW_PLUS_DAY_1100|                                                      |3600    |        |                 |          |DS        |    |          |true      |true           |
+|4066      |E7d3-e68b|Criminal Minds                  |$ZTODAY_0000            |                                                      |36000   |        |                 |          |DD        |    |          |true      |true           |
+|4066      |E7d3-e69b|Nothing to Declare              |$ZTODAY_1000            |                                                      |7200    |        |                 |          |M         |    |          |          |               |
+|4066      |E7d3-e3c4|Sun Sea and A&E                 |$ZTODAY_1200            |                                                      |3600    |        |                 |          |S         |    |          |          |               |
+|4066      |E7d3-e4cd|CSI : Crime Scene               |$ZTODAY_1300            |                                                      |14400   |        |                 |          |DS        |    |          |          |               |
+|4066      |E7d3-e6da|Coronation Street               |$ZTODAY_1700            |                                                      |18000   |        |                 |U         |DD        |    |          |          |               |
+|4066      |E7d3-e65d|Law & Order UK                  |$ZTODAY_2200            |                                                      |4800    |        |                 |          |M         |    |          |          |               |
+|4066      |E7d3-e55d|This Morning                    |$ZTODAY_2300            |                                                      |1800    |        |                 |15        |S         |    |          |          |               |
+|4066      |E7d3-e5bd|Great History                   |$ZYESTERDAY_2300        |                                                      |0       |        |                 |          |DS        |    |          |          |               |
+|4066      |A7d3-e5bd|In the beginning                |$PAST                   |                                                      |0       |        |                 |          |DS        |    |          |          |true           |
+|1850      |E7d2-e4ae|Live House of Commons           |$ZYESTERDAY_2300        |                                                      |93600   |true    |true             |PG        |DD        |true|true      |          |               |
+|2002      |E7d2-e690|BBC News at Ten                 |$NOW                    |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2002      |E7d2-f198|Celebrity MasterChef            |$ZTODAY_2000            |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2002      |E7d2-f198|Mrs Brown's Boys                |$ZTODAY_2100            |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2002      |E7d2-e690|BBC News at Ten                 |$ZTODAY_2130            |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2002      |E7d2-f198|Celebrity MasterChef            |$ZTOMORROW_PLUS_DAY_2000|                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2002      |E7d2-f198|Mrs Brown's Boys                |$ZTOMORROW_2000         |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2075      |E81b-edbd|Springwatch 2014                |$ZTODAY_2000            |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2075      |E81b-edbe|Springwatch Unsprung            |$ZTODAY_2100            |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2075      |E81b-f22c|QI                              |$ZTODAY_2130            |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|2075      |E81b-ece4|Mock the Week                   |$ZTODAY_2200            |                                                      |1800    |true    |true             |PG        |DD        |true|true      |true      |true           |
+|1093      |E11q-e6xp|Back To The Future 2            |$ZTODAY_1300            |                                                      |14400   |        |                 |          |DS        |    |          |true      |true           |
+|1093      |E11Z-e65p|Game Of Thrones                 |$NOW                    |                                                      |2400    |        |                 |          |DS        |    |          |true      |true           |
+|1093      |E1A9-e22s|Top Gear Special                |$NOW_MINUS_10           |                                                      |2400    |        |                 |          |DS        |    |          |true      |true           |
+
+!define RECORDABLE_EVENT_ID {E7d2-e3m2}
+!define LINKABLE_EVENT_ID {A7d3-e5bd}
+!define RECORDABLE_LINKABLE_EVENT_ID {E7d2-e3m3}
+!define UNRECORDABLE_EVENT_ID {E7d3-e5bd}

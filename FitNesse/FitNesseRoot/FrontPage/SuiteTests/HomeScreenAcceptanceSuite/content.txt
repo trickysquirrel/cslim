@@ -1,0 +1,7 @@
+[[Services Protocol Reference][https://www.stb.bskyb.com/confluence/display/2016/Application+Middleware+Services+%28AMS%29+Protocol+Reference]]
+
+----
+'''As a user, I want to view Home Screen so that I can access all the available links.'''
+
+|>HomeScreenBrowsingTests   |Specifies behaviour for browsing links available on the Home Screen |
+

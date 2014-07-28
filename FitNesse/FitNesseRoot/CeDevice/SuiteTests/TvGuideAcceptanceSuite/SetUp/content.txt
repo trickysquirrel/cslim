@@ -1,0 +1,4 @@
+[[Services Protocol Reference][https://www.stb.bskyb.com/confluence/display/2016/Application+Middleware+Services+%28AMS%29+Protocol+Reference]]
+
+!include -c <SuiteTests.UtilityScripts.DateUtilities
+!include -c <TvGuideAcceptanceSuite.TvChannelsData

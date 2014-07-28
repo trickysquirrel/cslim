@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<properties>
+	<Files>true</Files>
+	<Properties>true</Properties>
+	<RecentChanges>true</RecentChanges>
+	<Refactor>true</Refactor>
+	<Search>true</Search>
+	<Versions>true</Versions>
+	<WhereUsed>true</WhereUsed>
+	<WikiImport>
+		<LastRemoteModification>20140312172843</LastRemoteModification>
+		<Source>http://ci:8080/CeDeviceTests.SuiteTests.TvGuideAcceptanceSuite.TvChannelsData</Source>
+	</WikiImport>
+</properties>

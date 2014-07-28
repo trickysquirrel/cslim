@@ -1,0 +1,63 @@
+!1 iOS User Story
+|Comment                                                                                                                                                                    |
+|[[NGDEV-8639][https://www.stb.bskyb.com/jira/browse/NGDEV-8639]]|Display the channel title, synopsis, broadcast date and time for a linear programme in the programme strip|
+|Test Traceability Notes                                         |As part of Fitnesse tests we cover most of the Acceptance Criteria                                        |
+|As a viewer I want to read a description of the programme, so that I can have a brief summary that will help me make a decision if the programme is interesting to watch.  |
+
+|Comment                                                                                                                              |
+|[[NGDEV-8592][https://www.stb.bskyb.com/jira/browse/NGDEV-8592]]   |Display duration of a linear programme in the programme strip    |
+|Test Traceability Notes                                            |As part of Fitnesse tests we cover most of Acceptance Criteria   |
+|As a viewer I want to see the duration of the programme that I am interested in, so that I can see if I have enough time to watch it.|
+
+'''Expected Results'''
+
+!4 
+!4 Scenario: Check default displayed programme Strip is the first programme
+Given the programme schedule for channel ITV today. When I view the schedule the the first programme should be selected
+
+!| script|(CEF) Channel Schedule Fixture|6504           |$TODAY          |
+|check   |selected                      |Uefa Champions League Highlights|
+
+
+!4 
+!4 Scenario: Check selected programme displays programme strip
+Given the programme schedule for channel ITV today. When I select one of the programmes from the list Then programme should be selected
+
+!| script  |(CEF) Channel Schedule Fixture|6504           |$TODAY          |
+|select row|0                                                              |
+|check     |selected                      |Uefa Champions League Highlights|
+|select row|1                                                              |
+|check     |selected                      |Budget 2014                     |
+|select row|2                                                              |
+|check     |selected                      |ITV News                        |
+
+!4 
+!4 Scenario: Check selected programme displays programme synopsis & title
+Given the programme Coronation Street on ITV (ID E7d2-e3ww).  When I display the programme. Then the Programme Title, Programme Synopsis,  Start Time, End Time & Duration should be displayed
+
+Note: End Time needs to calculated ( Start Time + Duration )
+
+!| Query:(CEF) Programme Strip Fixture|E7d2-e3ww                                                                       |
+|Programme Title                      |Synopsis                                              |Time            |Duration|
+|Coronation Street                    |Will Tyrone resist Maria? Rita receives news of Dennis|5:00pm - 10:00pm|5hrs    |
+
+!| Query:(CEF) Programme Strip Fixture|E7d2-e3b0                 |
+|Programme Title                      |Time             |Duration|
+|Law & Order UK                       |10:00pm - 10:30pm|30m     |
+
+
+!4 
+!4 Error Scenarios
+Scenario : Given loading a schedule, when errors occur, then a message is displayed
+
+|script   |(CEF) Data Loading Error Fixture                  |
+|http code|404    |error code              |2001             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|500    |error code              |2002             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|503    |error code              |2003             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|400    |error code              |2004             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|200    |error code              |                 |
+|check    |message|null                                      |

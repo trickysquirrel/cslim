@@ -1,0 +1,11 @@
+[[Services Protocol Reference][https://www.stb.bskyb.com/confluence/display/2016/Application+Middleware+Services+%28AMS%29+Protocol+Reference]]
+
+----
+'''As a user, I want to view content that has been recorded on Ethan boxes so that I know what recordings I have.'''
+
+|>BrowsingTests   |Specifies behaviour for browsing grouped recorded programmes    |
+|>HomeNetworkTests|Specifies behaviour for different network scenarios     |
+|>PlaybackTests   |Specifices behaviour for playing back content on the box|
+
+
+>RecordedItemsData

@@ -1,0 +1,11 @@
+'''Channels Input Data'''
+
+!| DT:(BEN) Channels Builder |
+|Channel      |Channel Number|
+|BBC One      |101           |
+|BBC Two HD   |102           |
+|ITV          |103           |
+|Channel 4    |104           |
+|Channel 5    |105           |
+|Sky 1 HD     |106           |
+|Sky Living HD|107           |

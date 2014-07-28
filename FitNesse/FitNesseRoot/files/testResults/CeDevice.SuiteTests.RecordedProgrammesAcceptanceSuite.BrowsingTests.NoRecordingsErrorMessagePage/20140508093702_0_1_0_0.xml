@@ -1,0 +1,1612 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20140201</FitNesseVersion>
+  <rootPath>CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.BrowsingTests.NoRecordingsErrorMessagePage</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <runTimeInMillis>75</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand All&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse All&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.SetUp"&gt;.CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.SetUp&lt;/a&gt; &lt;a href="CeDevice.SuiteTests.RecordedProgrammesAcceptanceSuite.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;a href="https://www.stb.bskyb.com/confluence/display/2016/Application+Middleware+Services+%28AMS%29+Protocol+Reference"&gt;Services Protocol Reference&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand All&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse All&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="CeDevice.SuiteTests.UtilityScripts.DateUtilities"&gt;.CeDevice.SuiteTests.UtilityScripts.DateUtilities&lt;/a&gt; &lt;a href="CeDevice.SuiteTests.UtilityScripts.DateUtilities?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="6"&gt;&lt;span class="pass"&gt;(BEN) Get Date&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$NOW&amp;lt;-[08-05-2014 09:37AM]&lt;/td&gt;
+		&lt;td colspan="6"&gt;now&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$FUTURE&amp;lt;-[01-01-3001 12:00AM]&lt;/td&gt;
+		&lt;td colspan="6"&gt;future&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$PAST&amp;lt;-[29-12-0001 11:58PM]&lt;/td&gt;
+		&lt;td colspan="6"&gt;past&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$EPOCH&amp;lt;-[01-01-1970]&lt;/td&gt;
+		&lt;td colspan="6"&gt;epoch&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$BST_CHANGE_DATE&amp;lt;-[26-10-2014]&lt;/td&gt;
+		&lt;td colspan="6"&gt;bstBeginsDate2014&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$YESTERDAY&amp;lt;-[07-05-2014]&lt;/td&gt;
+		&lt;td colspan="6"&gt;yesterday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$TOMORROW&amp;lt;-[09-05-2014]&lt;/td&gt;
+		&lt;td colspan="6"&gt;tomorrow&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$DATE&amp;lt;-[08-05-2014]&lt;/td&gt;
+		&lt;td colspan="6"&gt;date&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$TODAY&amp;lt;-[08-05-2014]&lt;/td&gt;
+		&lt;td colspan="6"&gt;date&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$DAY_AFTER_TOMORROW&amp;lt;-[10-05-2014]&lt;/td&gt;
+		&lt;td&gt;dateByAddingDays&lt;/td&gt;
+		&lt;td colspan="5"&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZYESTERDAY_2300&amp;lt;-[07-05-2014 11:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;-1&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0000&amp;lt;-[08-05-2014 12:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0030&amp;lt;-[08-05-2014 12:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0100&amp;lt;-[08-05-2014 01:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0130&amp;lt;-[08-05-2014 01:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0200&amp;lt;-[08-05-2014 02:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0230&amp;lt;-[08-05-2014 02:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0300&amp;lt;-[08-05-2014 03:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0330&amp;lt;-[08-05-2014 03:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0400&amp;lt;-[08-05-2014 04:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0430&amp;lt;-[08-05-2014 04:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0500&amp;lt;-[08-05-2014 05:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0530&amp;lt;-[08-05-2014 05:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0600&amp;lt;-[08-05-2014 06:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;6&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0630&amp;lt;-[08-05-2014 06:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;6&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0700&amp;lt;-[08-05-2014 07:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0730&amp;lt;-[08-05-2014 07:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0800&amp;lt;-[08-05-2014 08:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0830&amp;lt;-[08-05-2014 08:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0900&amp;lt;-[08-05-2014 09:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;9&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_0930&amp;lt;-[08-05-2014 09:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;9&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1000&amp;lt;-[08-05-2014 10:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1030&amp;lt;-[08-05-2014 10:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1100&amp;lt;-[08-05-2014 11:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;11&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1130&amp;lt;-[08-05-2014 11:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;11&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1200&amp;lt;-[08-05-2014 12:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;12&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1230&amp;lt;-[08-05-2014 12:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;12&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1300&amp;lt;-[08-05-2014 01:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;13&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1330&amp;lt;-[08-05-2014 01:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;13&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1400&amp;lt;-[08-05-2014 02:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;14&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1430&amp;lt;-[08-05-2014 02:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;14&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1500&amp;lt;-[08-05-2014 03:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1530&amp;lt;-[08-05-2014 03:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1600&amp;lt;-[08-05-2014 04:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;16&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1630&amp;lt;-[08-05-2014 04:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;16&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1700&amp;lt;-[08-05-2014 05:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;17&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1730&amp;lt;-[08-05-2014 05:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;17&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1800&amp;lt;-[08-05-2014 06:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;18&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1830&amp;lt;-[08-05-2014 06:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;18&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1900&amp;lt;-[08-05-2014 07:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;19&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_1930&amp;lt;-[08-05-2014 07:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;19&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_2000&amp;lt;-[08-05-2014 08:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;20&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_2030&amp;lt;-[08-05-2014 08:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;20&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_2100&amp;lt;-[08-05-2014 09:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;21&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_2130&amp;lt;-[08-05-2014 09:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;21&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_2200&amp;lt;-[08-05-2014 10:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;22&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_2230&amp;lt;-[08-05-2014 10:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;22&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_2300&amp;lt;-[08-05-2014 11:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;23&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTODAY_2330&amp;lt;-[08-05-2014 11:30PM]&lt;/td&gt;
+		&lt;td&gt;dateWithHours&lt;/td&gt;
+		&lt;td&gt;23&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td colspan="3"&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTOMORROW_0000&amp;lt;-[09-05-2014 12:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithDays&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;hours&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTOMORROW_0030&amp;lt;-[09-05-2014 12:30AM]&lt;/td&gt;
+		&lt;td&gt;dateWithDays&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;hours&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTOMORROW_PLUS_DAY_1000&amp;lt;-[10-05-2014 10:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithDays&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;hours&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTOMORROW_PLUS_DAY_1100&amp;lt;-[10-05-2014 11:00AM]&lt;/td&gt;
+		&lt;td&gt;dateWithDays&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;hours&lt;/td&gt;
+		&lt;td&gt;11&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ZTOMORROW_PLUS_DAY_1200&amp;lt;-[10-05-2014 12:00PM]&lt;/td&gt;
+		&lt;td&gt;dateWithDays&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;hours&lt;/td&gt;
+		&lt;td&gt;12&lt;/td&gt;
+		&lt;td&gt;minutes&lt;/td&gt;
+		&lt;td&gt;00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$NOW_FORMATTED_12HOUR_SHORT&amp;lt;-[TODO]&lt;/td&gt;
+		&lt;td&gt;date&lt;/td&gt;
+		&lt;td&gt;$NOW-&gt;[08-05-2014 09:37AM]&lt;/td&gt;
+		&lt;td&gt;withFormat&lt;/td&gt;
+		&lt;td colspan="3"&gt;hh:mm&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$NOW_FORMATTED_12HOUR_LONG&amp;lt;-[TODO]&lt;/td&gt;
+		&lt;td&gt;date&lt;/td&gt;
+		&lt;td&gt;$NOW-&gt;[08-05-2014 09:37AM]&lt;/td&gt;
+		&lt;td&gt;withFormat&lt;/td&gt;
+		&lt;td colspan="3"&gt;mm/dd hh:mm&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1&gt;Most Recents - Empty PVR listing&lt;/h1&gt;
+Scenario : Given Mysky+ has no recordings, "You have no recordings" message is displayed&lt;br/&gt;&lt;br/&gt;&lt;h1&gt;Android User Story&lt;/h1&gt;
+Covers the following User Stories related to Scheduled Recordings&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;span class="fail"&gt;"&amp;lt;a href="https://www.stb.bskyb.com/jira/browse/NGDEV-9698"&amp;gt;NGDEV-9698&amp;lt;/a&amp;gt;" is not a valid table type.&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;CE Device - Most Recents - Empty PVR listing&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Test Traceability Notes&lt;/td&gt;
+		&lt;td&gt;As part of Fitnesse tests we cover most of the Acceptance Criteria&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;As a product manager I do want to show a notification that there are no PVR items to display&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;b&gt;Input Data : Recordings&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="6"&gt;&lt;span class="pass"&gt;DT:(BEN) Recordings Builder&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Title&lt;/td&gt;
+		&lt;td&gt;Channel&lt;/td&gt;
+		&lt;td&gt;Date&lt;/td&gt;
+		&lt;td&gt;Status&lt;/td&gt;
+		&lt;td&gt;Channel Number&lt;/td&gt;
+		&lt;td&gt;Readable Date Format&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;b&gt;Expected Results&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;(BEN) Grouped Recorded Programmes Fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;recordings&lt;/td&gt;
+		&lt;td&gt;false &lt;span class="error"&gt;Method recordings not found in BENGroupedRecordedProgrammesFixture.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;message&lt;/td&gt;
+		&lt;td&gt;[null] &lt;span class="fail"&gt;expected [You currently have no recordings]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>NoRecordingsErrorMessagePage</relativePageName>
+    
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_0', instruction='make', instanceName='scriptTableActor', className='BENGetDate', args=[]}</instruction>
+        <slimResult>pass((BEN) Get Date)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_0_0</instructionId>
+                    <col>1</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>(BEN) Get Date</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_1', instruction='callAndAssign', symbolName='NOW', instanceName='scriptTableActor', methodName='now', args=[]}</instruction>
+        <slimResult>$NOW&lt;-[08-05-2014 09:37AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_1</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$NOW&lt;-[08-05-2014 09:37AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_2', instruction='callAndAssign', symbolName='FUTURE', instanceName='scriptTableActor', methodName='future', args=[]}</instruction>
+        <slimResult>$FUTURE&lt;-[01-01-3001 12:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_2</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$FUTURE&lt;-[01-01-3001 12:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_3', instruction='callAndAssign', symbolName='PAST', instanceName='scriptTableActor', methodName='past', args=[]}</instruction>
+        <slimResult>$PAST&lt;-[29-12-0001 11:58PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_3</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$PAST&lt;-[29-12-0001 11:58PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_4', instruction='callAndAssign', symbolName='EPOCH', instanceName='scriptTableActor', methodName='epoch', args=[]}</instruction>
+        <slimResult>$EPOCH&lt;-[01-01-1970]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_4</instructionId>
+                    <col>0</col>
+                              <row>4</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$EPOCH&lt;-[01-01-1970]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_5', instruction='callAndAssign', symbolName='BST_CHANGE_DATE', instanceName='scriptTableActor', methodName='bstBeginsDate2014', args=[]}</instruction>
+        <slimResult>$BST_CHANGE_DATE&lt;-[26-10-2014]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_5</instructionId>
+                    <col>0</col>
+                              <row>5</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$BST_CHANGE_DATE&lt;-[26-10-2014]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_6', instruction='callAndAssign', symbolName='YESTERDAY', instanceName='scriptTableActor', methodName='yesterday', args=[]}</instruction>
+        <slimResult>$YESTERDAY&lt;-[07-05-2014]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_6</instructionId>
+                    <col>0</col>
+                              <row>6</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$YESTERDAY&lt;-[07-05-2014]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_7', instruction='callAndAssign', symbolName='TOMORROW', instanceName='scriptTableActor', methodName='tomorrow', args=[]}</instruction>
+        <slimResult>$TOMORROW&lt;-[09-05-2014]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_7</instructionId>
+                    <col>0</col>
+                              <row>7</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$TOMORROW&lt;-[09-05-2014]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_8', instruction='callAndAssign', symbolName='DATE', instanceName='scriptTableActor', methodName='date', args=[]}</instruction>
+        <slimResult>$DATE&lt;-[08-05-2014]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_8</instructionId>
+                    <col>0</col>
+                              <row>8</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$DATE&lt;-[08-05-2014]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_9', instruction='callAndAssign', symbolName='TODAY', instanceName='scriptTableActor', methodName='date', args=[]}</instruction>
+        <slimResult>$TODAY&lt;-[08-05-2014]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_9</instructionId>
+                    <col>0</col>
+                              <row>9</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$TODAY&lt;-[08-05-2014]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_10', instruction='callAndAssign', symbolName='DAY_AFTER_TOMORROW', instanceName='scriptTableActor', methodName='dateByAddingDays', args=[2]}</instruction>
+        <slimResult>$DAY_AFTER_TOMORROW&lt;-[10-05-2014]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_10</instructionId>
+                    <col>0</col>
+                              <row>10</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$DAY_AFTER_TOMORROW&lt;-[10-05-2014]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_11', instruction='callAndAssign', symbolName='ZYESTERDAY_2300', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[-1, 0]}</instruction>
+        <slimResult>$ZYESTERDAY_2300&lt;-[07-05-2014 11:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_11</instructionId>
+                    <col>0</col>
+                              <row>11</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZYESTERDAY_2300&lt;-[07-05-2014 11:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_12', instruction='callAndAssign', symbolName='ZTODAY_0000', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[0, 0]}</instruction>
+        <slimResult>$ZTODAY_0000&lt;-[08-05-2014 12:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_12</instructionId>
+                    <col>0</col>
+                              <row>12</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0000&lt;-[08-05-2014 12:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_13', instruction='callAndAssign', symbolName='ZTODAY_0030', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[0, 30]}</instruction>
+        <slimResult>$ZTODAY_0030&lt;-[08-05-2014 12:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_13</instructionId>
+                    <col>0</col>
+                              <row>13</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0030&lt;-[08-05-2014 12:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_14', instruction='callAndAssign', symbolName='ZTODAY_0100', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[1, 00]}</instruction>
+        <slimResult>$ZTODAY_0100&lt;-[08-05-2014 01:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_14</instructionId>
+                    <col>0</col>
+                              <row>14</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0100&lt;-[08-05-2014 01:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_15', instruction='callAndAssign', symbolName='ZTODAY_0130', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[1, 30]}</instruction>
+        <slimResult>$ZTODAY_0130&lt;-[08-05-2014 01:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_15</instructionId>
+                    <col>0</col>
+                              <row>15</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0130&lt;-[08-05-2014 01:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_16', instruction='callAndAssign', symbolName='ZTODAY_0200', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[2, 00]}</instruction>
+        <slimResult>$ZTODAY_0200&lt;-[08-05-2014 02:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_16</instructionId>
+                    <col>0</col>
+                              <row>16</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0200&lt;-[08-05-2014 02:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_17', instruction='callAndAssign', symbolName='ZTODAY_0230', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[2, 30]}</instruction>
+        <slimResult>$ZTODAY_0230&lt;-[08-05-2014 02:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_17</instructionId>
+                    <col>0</col>
+                              <row>17</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0230&lt;-[08-05-2014 02:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_18', instruction='callAndAssign', symbolName='ZTODAY_0300', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[3, 00]}</instruction>
+        <slimResult>$ZTODAY_0300&lt;-[08-05-2014 03:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_18</instructionId>
+                    <col>0</col>
+                              <row>18</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0300&lt;-[08-05-2014 03:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_19', instruction='callAndAssign', symbolName='ZTODAY_0330', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[3, 30]}</instruction>
+        <slimResult>$ZTODAY_0330&lt;-[08-05-2014 03:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_19</instructionId>
+                    <col>0</col>
+                              <row>19</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0330&lt;-[08-05-2014 03:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_20', instruction='callAndAssign', symbolName='ZTODAY_0400', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[4, 00]}</instruction>
+        <slimResult>$ZTODAY_0400&lt;-[08-05-2014 04:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_20</instructionId>
+                    <col>0</col>
+                              <row>20</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0400&lt;-[08-05-2014 04:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_21', instruction='callAndAssign', symbolName='ZTODAY_0430', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[4, 30]}</instruction>
+        <slimResult>$ZTODAY_0430&lt;-[08-05-2014 04:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_21</instructionId>
+                    <col>0</col>
+                              <row>21</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0430&lt;-[08-05-2014 04:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_22', instruction='callAndAssign', symbolName='ZTODAY_0500', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[5, 00]}</instruction>
+        <slimResult>$ZTODAY_0500&lt;-[08-05-2014 05:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_22</instructionId>
+                    <col>0</col>
+                              <row>22</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0500&lt;-[08-05-2014 05:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_23', instruction='callAndAssign', symbolName='ZTODAY_0530', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[5, 30]}</instruction>
+        <slimResult>$ZTODAY_0530&lt;-[08-05-2014 05:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_23</instructionId>
+                    <col>0</col>
+                              <row>23</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0530&lt;-[08-05-2014 05:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_24', instruction='callAndAssign', symbolName='ZTODAY_0600', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[6, 00]}</instruction>
+        <slimResult>$ZTODAY_0600&lt;-[08-05-2014 06:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_24</instructionId>
+                    <col>0</col>
+                              <row>24</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0600&lt;-[08-05-2014 06:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_25', instruction='callAndAssign', symbolName='ZTODAY_0630', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[6, 30]}</instruction>
+        <slimResult>$ZTODAY_0630&lt;-[08-05-2014 06:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_25</instructionId>
+                    <col>0</col>
+                              <row>25</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0630&lt;-[08-05-2014 06:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_26', instruction='callAndAssign', symbolName='ZTODAY_0700', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[7, 00]}</instruction>
+        <slimResult>$ZTODAY_0700&lt;-[08-05-2014 07:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_26</instructionId>
+                    <col>0</col>
+                              <row>26</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0700&lt;-[08-05-2014 07:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_27', instruction='callAndAssign', symbolName='ZTODAY_0730', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[7, 30]}</instruction>
+        <slimResult>$ZTODAY_0730&lt;-[08-05-2014 07:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_27</instructionId>
+                    <col>0</col>
+                              <row>27</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0730&lt;-[08-05-2014 07:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_28', instruction='callAndAssign', symbolName='ZTODAY_0800', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[8, 00]}</instruction>
+        <slimResult>$ZTODAY_0800&lt;-[08-05-2014 08:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_28</instructionId>
+                    <col>0</col>
+                              <row>28</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0800&lt;-[08-05-2014 08:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_29', instruction='callAndAssign', symbolName='ZTODAY_0830', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[8, 30]}</instruction>
+        <slimResult>$ZTODAY_0830&lt;-[08-05-2014 08:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_29</instructionId>
+                    <col>0</col>
+                              <row>29</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0830&lt;-[08-05-2014 08:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_30', instruction='callAndAssign', symbolName='ZTODAY_0900', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[9, 00]}</instruction>
+        <slimResult>$ZTODAY_0900&lt;-[08-05-2014 09:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_30</instructionId>
+                    <col>0</col>
+                              <row>30</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0900&lt;-[08-05-2014 09:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_31', instruction='callAndAssign', symbolName='ZTODAY_0930', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[9, 30]}</instruction>
+        <slimResult>$ZTODAY_0930&lt;-[08-05-2014 09:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_31</instructionId>
+                    <col>0</col>
+                              <row>31</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_0930&lt;-[08-05-2014 09:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_32', instruction='callAndAssign', symbolName='ZTODAY_1000', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[10, 00]}</instruction>
+        <slimResult>$ZTODAY_1000&lt;-[08-05-2014 10:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_32</instructionId>
+                    <col>0</col>
+                              <row>32</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1000&lt;-[08-05-2014 10:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_33', instruction='callAndAssign', symbolName='ZTODAY_1030', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[10, 30]}</instruction>
+        <slimResult>$ZTODAY_1030&lt;-[08-05-2014 10:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_33</instructionId>
+                    <col>0</col>
+                              <row>33</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1030&lt;-[08-05-2014 10:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_34', instruction='callAndAssign', symbolName='ZTODAY_1100', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[11, 00]}</instruction>
+        <slimResult>$ZTODAY_1100&lt;-[08-05-2014 11:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_34</instructionId>
+                    <col>0</col>
+                              <row>34</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1100&lt;-[08-05-2014 11:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_35', instruction='callAndAssign', symbolName='ZTODAY_1130', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[11, 30]}</instruction>
+        <slimResult>$ZTODAY_1130&lt;-[08-05-2014 11:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_35</instructionId>
+                    <col>0</col>
+                              <row>35</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1130&lt;-[08-05-2014 11:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_36', instruction='callAndAssign', symbolName='ZTODAY_1200', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[12, 00]}</instruction>
+        <slimResult>$ZTODAY_1200&lt;-[08-05-2014 12:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_36</instructionId>
+                    <col>0</col>
+                              <row>36</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1200&lt;-[08-05-2014 12:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_37', instruction='callAndAssign', symbolName='ZTODAY_1230', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[12, 30]}</instruction>
+        <slimResult>$ZTODAY_1230&lt;-[08-05-2014 12:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_37</instructionId>
+                    <col>0</col>
+                              <row>37</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1230&lt;-[08-05-2014 12:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_38', instruction='callAndAssign', symbolName='ZTODAY_1300', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[13, 00]}</instruction>
+        <slimResult>$ZTODAY_1300&lt;-[08-05-2014 01:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_38</instructionId>
+                    <col>0</col>
+                              <row>38</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1300&lt;-[08-05-2014 01:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_39', instruction='callAndAssign', symbolName='ZTODAY_1330', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[13, 30]}</instruction>
+        <slimResult>$ZTODAY_1330&lt;-[08-05-2014 01:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_39</instructionId>
+                    <col>0</col>
+                              <row>39</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1330&lt;-[08-05-2014 01:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_40', instruction='callAndAssign', symbolName='ZTODAY_1400', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[14, 00]}</instruction>
+        <slimResult>$ZTODAY_1400&lt;-[08-05-2014 02:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_40</instructionId>
+                    <col>0</col>
+                              <row>40</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1400&lt;-[08-05-2014 02:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_41', instruction='callAndAssign', symbolName='ZTODAY_1430', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[14, 30]}</instruction>
+        <slimResult>$ZTODAY_1430&lt;-[08-05-2014 02:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_41</instructionId>
+                    <col>0</col>
+                              <row>41</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1430&lt;-[08-05-2014 02:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_42', instruction='callAndAssign', symbolName='ZTODAY_1500', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[15, 00]}</instruction>
+        <slimResult>$ZTODAY_1500&lt;-[08-05-2014 03:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_42</instructionId>
+                    <col>0</col>
+                              <row>42</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1500&lt;-[08-05-2014 03:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_43', instruction='callAndAssign', symbolName='ZTODAY_1530', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[15, 30]}</instruction>
+        <slimResult>$ZTODAY_1530&lt;-[08-05-2014 03:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_43</instructionId>
+                    <col>0</col>
+                              <row>43</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1530&lt;-[08-05-2014 03:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_44', instruction='callAndAssign', symbolName='ZTODAY_1600', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[16, 00]}</instruction>
+        <slimResult>$ZTODAY_1600&lt;-[08-05-2014 04:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_44</instructionId>
+                    <col>0</col>
+                              <row>44</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1600&lt;-[08-05-2014 04:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_45', instruction='callAndAssign', symbolName='ZTODAY_1630', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[16, 30]}</instruction>
+        <slimResult>$ZTODAY_1630&lt;-[08-05-2014 04:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_45</instructionId>
+                    <col>0</col>
+                              <row>45</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1630&lt;-[08-05-2014 04:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_46', instruction='callAndAssign', symbolName='ZTODAY_1700', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[17, 00]}</instruction>
+        <slimResult>$ZTODAY_1700&lt;-[08-05-2014 05:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_46</instructionId>
+                    <col>0</col>
+                              <row>46</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1700&lt;-[08-05-2014 05:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_47', instruction='callAndAssign', symbolName='ZTODAY_1730', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[17, 30]}</instruction>
+        <slimResult>$ZTODAY_1730&lt;-[08-05-2014 05:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_47</instructionId>
+                    <col>0</col>
+                              <row>47</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1730&lt;-[08-05-2014 05:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_48', instruction='callAndAssign', symbolName='ZTODAY_1800', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[18, 00]}</instruction>
+        <slimResult>$ZTODAY_1800&lt;-[08-05-2014 06:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_48</instructionId>
+                    <col>0</col>
+                              <row>48</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1800&lt;-[08-05-2014 06:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_49', instruction='callAndAssign', symbolName='ZTODAY_1830', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[18, 30]}</instruction>
+        <slimResult>$ZTODAY_1830&lt;-[08-05-2014 06:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_49</instructionId>
+                    <col>0</col>
+                              <row>49</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1830&lt;-[08-05-2014 06:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_50', instruction='callAndAssign', symbolName='ZTODAY_1900', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[19, 00]}</instruction>
+        <slimResult>$ZTODAY_1900&lt;-[08-05-2014 07:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_50</instructionId>
+                    <col>0</col>
+                              <row>50</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1900&lt;-[08-05-2014 07:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_51', instruction='callAndAssign', symbolName='ZTODAY_1930', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[19, 30]}</instruction>
+        <slimResult>$ZTODAY_1930&lt;-[08-05-2014 07:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_51</instructionId>
+                    <col>0</col>
+                              <row>51</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_1930&lt;-[08-05-2014 07:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_52', instruction='callAndAssign', symbolName='ZTODAY_2000', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[20, 00]}</instruction>
+        <slimResult>$ZTODAY_2000&lt;-[08-05-2014 08:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_52</instructionId>
+                    <col>0</col>
+                              <row>52</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_2000&lt;-[08-05-2014 08:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_53', instruction='callAndAssign', symbolName='ZTODAY_2030', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[20, 30]}</instruction>
+        <slimResult>$ZTODAY_2030&lt;-[08-05-2014 08:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_53</instructionId>
+                    <col>0</col>
+                              <row>53</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_2030&lt;-[08-05-2014 08:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_54', instruction='callAndAssign', symbolName='ZTODAY_2100', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[21, 00]}</instruction>
+        <slimResult>$ZTODAY_2100&lt;-[08-05-2014 09:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_54</instructionId>
+                    <col>0</col>
+                              <row>54</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_2100&lt;-[08-05-2014 09:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_55', instruction='callAndAssign', symbolName='ZTODAY_2130', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[21, 30]}</instruction>
+        <slimResult>$ZTODAY_2130&lt;-[08-05-2014 09:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_55</instructionId>
+                    <col>0</col>
+                              <row>55</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_2130&lt;-[08-05-2014 09:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_56', instruction='callAndAssign', symbolName='ZTODAY_2200', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[22, 00]}</instruction>
+        <slimResult>$ZTODAY_2200&lt;-[08-05-2014 10:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_56</instructionId>
+                    <col>0</col>
+                              <row>56</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_2200&lt;-[08-05-2014 10:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_57', instruction='callAndAssign', symbolName='ZTODAY_2230', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[22, 30]}</instruction>
+        <slimResult>$ZTODAY_2230&lt;-[08-05-2014 10:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_57</instructionId>
+                    <col>0</col>
+                              <row>57</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_2230&lt;-[08-05-2014 10:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_58', instruction='callAndAssign', symbolName='ZTODAY_2300', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[23, 00]}</instruction>
+        <slimResult>$ZTODAY_2300&lt;-[08-05-2014 11:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_58</instructionId>
+                    <col>0</col>
+                              <row>58</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_2300&lt;-[08-05-2014 11:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_59', instruction='callAndAssign', symbolName='ZTODAY_2330', instanceName='scriptTableActor', methodName='dateWithHoursMinutes', args=[23, 30]}</instruction>
+        <slimResult>$ZTODAY_2330&lt;-[08-05-2014 11:30PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_59</instructionId>
+                    <col>0</col>
+                              <row>59</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTODAY_2330&lt;-[08-05-2014 11:30PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_60', instruction='callAndAssign', symbolName='ZTOMORROW_0000', instanceName='scriptTableActor', methodName='dateWithDaysHoursMinutes', args=[1, 0, 00]}</instruction>
+        <slimResult>$ZTOMORROW_0000&lt;-[09-05-2014 12:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_60</instructionId>
+                    <col>0</col>
+                              <row>60</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTOMORROW_0000&lt;-[09-05-2014 12:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_61', instruction='callAndAssign', symbolName='ZTOMORROW_0030', instanceName='scriptTableActor', methodName='dateWithDaysHoursMinutes', args=[1, 0, 30]}</instruction>
+        <slimResult>$ZTOMORROW_0030&lt;-[09-05-2014 12:30AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_61</instructionId>
+                    <col>0</col>
+                              <row>61</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTOMORROW_0030&lt;-[09-05-2014 12:30AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_62', instruction='callAndAssign', symbolName='ZTOMORROW_PLUS_DAY_1000', instanceName='scriptTableActor', methodName='dateWithDaysHoursMinutes', args=[2, 10, 00]}</instruction>
+        <slimResult>$ZTOMORROW_PLUS_DAY_1000&lt;-[10-05-2014 10:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_62</instructionId>
+                    <col>0</col>
+                              <row>62</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTOMORROW_PLUS_DAY_1000&lt;-[10-05-2014 10:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_63', instruction='callAndAssign', symbolName='ZTOMORROW_PLUS_DAY_1100', instanceName='scriptTableActor', methodName='dateWithDaysHoursMinutes', args=[2, 11, 00]}</instruction>
+        <slimResult>$ZTOMORROW_PLUS_DAY_1100&lt;-[10-05-2014 11:00AM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_63</instructionId>
+                    <col>0</col>
+                              <row>63</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTOMORROW_PLUS_DAY_1100&lt;-[10-05-2014 11:00AM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_64', instruction='callAndAssign', symbolName='ZTOMORROW_PLUS_DAY_1200', instanceName='scriptTableActor', methodName='dateWithDaysHoursMinutes', args=[2, 12, 00]}</instruction>
+        <slimResult>$ZTOMORROW_PLUS_DAY_1200&lt;-[10-05-2014 12:00PM]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_64</instructionId>
+                    <col>0</col>
+                              <row>64</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$ZTOMORROW_PLUS_DAY_1200&lt;-[10-05-2014 12:00PM]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_65', instruction='callAndAssign', symbolName='NOW_FORMATTED_12HOUR_SHORT', instanceName='scriptTableActor', methodName='dateWithFormat', args=[$NOW, hh:mm]}</instruction>
+        <slimResult>$NOW_FORMATTED_12HOUR_SHORT&lt;-[TODO]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_65</instructionId>
+                    <col>0</col>
+                              <row>65</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$NOW_FORMATTED_12HOUR_SHORT&lt;-[TODO]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_66', instruction='callAndAssign', symbolName='NOW_FORMATTED_12HOUR_LONG', instanceName='scriptTableActor', methodName='dateWithFormat', args=[$NOW, mm/dd hh:mm]}</instruction>
+        <slimResult>$NOW_FORMATTED_12HOUR_LONG&lt;-[TODO]</slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_66</instructionId>
+                    <col>0</col>
+                              <row>66</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$NOW_FORMATTED_12HOUR_LONG&lt;-[TODO]</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_0', instruction='make', instanceName='decisionTable_2', className='BENRecordingsBuilder', args=[]}</instruction>
+        <slimResult>pass(DT:(BEN) Recordings Builder)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_2_0</instructionId>
+                    <col>0</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>DT:(BEN) Recordings Builder</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_4', instruction='call', instanceName='decisionTable_2', methodName='setTitle', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_4</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_5', instruction='call', instanceName='decisionTable_2', methodName='setChannel', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_5</instructionId>
+                    <col>1</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_6', instruction='call', instanceName='decisionTable_2', methodName='setDate', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_6</instructionId>
+                    <col>2</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_7', instruction='call', instanceName='decisionTable_2', methodName='setStatus', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_7</instructionId>
+                    <col>3</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_8', instruction='call', instanceName='decisionTable_2', methodName='setChannelNumber', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_8</instructionId>
+                    <col>4</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_9', instruction='call', instanceName='decisionTable_2', methodName='setReadableDateFormat', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_9</instructionId>
+                    <col>5</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_12', instruction='call', instanceName='decisionTable_2', methodName='setTitle', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_12</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_13', instruction='call', instanceName='decisionTable_2', methodName='setChannel', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_13</instructionId>
+                    <col>1</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_14', instruction='call', instanceName='decisionTable_2', methodName='setDate', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_14</instructionId>
+                    <col>2</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_15', instruction='call', instanceName='decisionTable_2', methodName='setStatus', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_15</instructionId>
+                    <col>3</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_16', instruction='call', instanceName='decisionTable_2', methodName='setChannelNumber', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_16</instructionId>
+                    <col>4</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_17', instruction='call', instanceName='decisionTable_2', methodName='setReadableDateFormat', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_17</instructionId>
+                    <col>5</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_20', instruction='call', instanceName='decisionTable_2', methodName='setTitle', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_20</instructionId>
+                    <col>0</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_21', instruction='call', instanceName='decisionTable_2', methodName='setChannel', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_21</instructionId>
+                    <col>1</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_22', instruction='call', instanceName='decisionTable_2', methodName='setDate', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_22</instructionId>
+                    <col>2</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_23', instruction='call', instanceName='decisionTable_2', methodName='setStatus', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_23</instructionId>
+                    <col>3</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_24', instruction='call', instanceName='decisionTable_2', methodName='setChannelNumber', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_24</instructionId>
+                    <col>4</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_25', instruction='call', instanceName='decisionTable_2', methodName='setReadableDateFormat', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_2_25</instructionId>
+                    <col>5</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_0', instruction='make', instanceName='scriptTableActor', className='BENGroupedRecordedProgrammesFixture', args=[]}</instruction>
+        <slimResult>pass((BEN) Grouped Recorded Programmes Fixture)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_3_0</instructionId>
+                    <col>1</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>(BEN) Grouped Recorded Programmes Fixture</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_1', instruction='call', instanceName='scriptTableActor', methodName='recordings', args=[]}</instruction>
+        <slimResult>null</slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_3_1</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>Method recordings not found in BENGroupedRecordedProgrammesFixture.</evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_2', instruction='call', instanceName='scriptTableActor', methodName='message', args=[]}</instruction>
+        <slimResult>fail(a=null;e=You currently have no recordings)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_3_2</instructionId>
+                    <col>2</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>null</actual>
+                              <expected>You currently have no recordings</expected>
+                            </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+    <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>76</totalRunTimeInMillis>
+  
+</testResults>
+

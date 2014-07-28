@@ -1,0 +1,79 @@
+| comment |
+| [[NGDEV-6586][https://www.stb.bskyb.com/jira/browse/NGDEV-6586]] | '''PLAYBACK on DEVICE - Watch a recording that is on my box from my CE device  (IN-HOME)''' |
+| Test Traceability Notes | As part of Fitnesse tests we cover Acceptance Criteria |
+| ''As a viewer, I want to watch a recording that is on my box from my CE device so that I can watch the recording while the TV is in use '' |
+
+!include -seamless <RecordedProgrammesAcceptanceSuite.RecordedItemsData
+!1 Acceptance Criteria
+Scenario: Given a status, the user should or should not be able to launch the player
+
+!| DT:(CEF) Device Pvr Playback Fixture |
+| ID | Should play item? |
+| 001 | true |
+| 002 | true |
+| 003 | true |
+| 004 | false |
+| 005 | false |
+| 006 | true |
+
+Scenario : Given playing a content which is recorded on the device, then I should request the correct stb url path
+
+!| script | (CEF) Device Pvr Playback Fixture |
+| play pvr id | P29000180 |
+| check | url path | /trans/BOOK:687866240/profileAnExample.ts |
+| check | url port | 4730 |
+
+Scenario: Given playing the content which is part recorded on the device and put the app in background the movie player should stopped when we launch the app again the movie player should not be visible
+
+!| script | (CEF) Device Pvr Playback Fixture |
+| play pvr id | P2900045BC |
+| Enter background |
+| check | video player hidden | true |
+
+Scenario : Given playing the content which is recorded on the Device, CE device lost WIFI connection then a message should displayed
+
+| comment |
+| script | (CEF) Device Pvr Playback Fixture |
+| play pvr id | P2900045BA |
+| Wifi | false |
+| check | message | No Network found, please check your connection reject ok button visible |
+| check | video player hidden | true |
+
+Scenario: Given playing the Pvr content  , when initialising fails, then a message is displayed
+
+!| script | (CEF) Device Pvr Playback Fixture |
+| play pvr id | P2900045BA |
+| init DRM error | 0xfe100200 |
+| check | error code | 3 |
+| check | message | Sorry, the app is currently unable to connect to the stream - please try again. If the problem persists please try re-starting the app. Code 3 |
+
+Scenario: Given playing the Pvr content , when activation fails, then a message is displayed
+
+!| script | (CEF) Device Pvr Playback Fixture |
+| play pvr id | P2900045BA |
+| activate DRM error | 0xfde00005 |
+| check | error code | 7 |
+| check | message | Sorry, the app is currently unable to connect to the stream - please try again. If the problem persists please try re-starting the app. Code 7 |
+
+Scenario: Given playing the Pvr content , when streaming fails, then a message is displayed and then movie player should not displayed
+
+!| script | (CEF) Device Pvr Playback Fixture |
+| play pvr id | P2900045BA |
+| streaming DRM error | 0xfe100200 |
+| check | error code | 3 |
+| check | message | Sorry, the app is currently unable to connect to the stream - please try again. If the problem persists please try re-starting the app. Code 3 |
+
+Scenario: Given playing the pvr content , if any status update , then a message is displayed and then movie player should not displayed
+
+!| script | (CEF) Device Pvr Playback Fixture |
+| play pvr id | P2900045BA |
+| status update error | 0xfd800078 |
+| check | error code | 21 |
+| check | message | Sorry, the app is currently unable to connect to the stream - please try again. If the problem persists please try re-starting the app. Code 21 |
+
+Scenario: Given trying to play a pvr Content  , if no url or error is triggered within 30 seconds, then a message is displayed to inform user
+
+!| script | (CEF) Device Pvr Playback Fixture |
+| play bad pvr id | P2900045BB |
+| force timeout |
+| check | message | Sorry, the app is currently unable to connect to the stream - please try again. If the problem persists please try re-starting the app. Code -1 |

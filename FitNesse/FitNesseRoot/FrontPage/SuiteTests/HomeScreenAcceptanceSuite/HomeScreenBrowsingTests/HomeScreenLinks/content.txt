@@ -1,0 +1,16 @@
+!1 User Story
+Covers the following User Stories related to Home Screen
+
+!5 
+!5 Jira Reference:  https://www.stb.bskyb.com/jira/browse/NGDEV-7552
+!5 '''Details :''' CE Device - Temporary Home - Start of Global Nav
+!5 '''Test Traceability Notes :''' As part of Fitnesse tests we cover Acceptance Criteria 2.
+!1 Acceptance Criteria
+!3 Scenario : Given on the Home screen, when selecting a link, you are taken to the correct destination.
+ * TV Guide, !-MySky+-! should be displayed
+
+|script             |(BEN) Home Screen Fixture|
+|select button named|My Sky+                  |
+|check              |destination |!-My Sky+-! |
+|select button named|TV Guide                 |
+|check              |destination |TV Guide    |

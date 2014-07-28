@@ -1,0 +1,15 @@
+
+!3 !-slim:bin/RunSlimTestsTargetWithSlimPort-!
+|'''Date: '''| 11:54:53 AM (BST) on Tuesday, July 22, 2014 |
+|'''Test Page: '''|.CeDevice.SuiteTests|
+|'''Command: '''| !-bin/RunSlimTestsTargetWithSlimPort  8086-! |
+|'''Exit code: '''| 0 |
+|'''Time elapsed: '''| 19.055 seconds |
+
+----
+'''Standard Error:'''
+{{{App Spec: <DTiPhoneSimulatorApplicationSpecifier 0x7fd1c2731260> specified by path /tmp/Benji.dst/Applications/AcceptanceTests.app
+SDK Root: <DTiPhoneSimulatorSystemRoot 0x7fd1c27307b0> path=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk version=7.1 name=Simulator - iOS 7.1
+using device family ipad
+Session started
+}}}

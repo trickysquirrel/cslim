@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<properties>
+	<Files>true</Files>
+	<Properties>true</Properties>
+	<RecentChanges>true</RecentChanges>
+	<Refactor>true</Refactor>
+	<Search>true</Search>
+	<Test>true</Test>
+	<Versions>true</Versions>
+	<WhereUsed>true</WhereUsed>
+	<WikiImport>
+		<AutoUpdate/>
+		<LastRemoteModification>20140605160358</LastRemoteModification>
+		<Source>http://10.65.4.86:8080/CeDevices.AppleDevices.BenjiSpecific.SyncTests</Source>
+	</WikiImport>
+</properties>

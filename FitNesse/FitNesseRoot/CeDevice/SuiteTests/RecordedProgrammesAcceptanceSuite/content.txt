@@ -1,0 +1,3 @@
+!4 As a user, I want to view content that has been recorded on Ethan boxes so that I know what recordings I have.
+
+!contents -R2 -g

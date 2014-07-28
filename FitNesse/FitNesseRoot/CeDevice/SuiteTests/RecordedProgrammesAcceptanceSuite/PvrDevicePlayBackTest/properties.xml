@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<properties>
+	<Files>true</Files>
+	<Properties>true</Properties>
+	<RecentChanges>true</RecentChanges>
+	<Refactor>true</Refactor>
+	<Search>true</Search>
+	<Test>true</Test>
+	<Versions>true</Versions>
+	<WhereUsed>true</WhereUsed>
+	<WikiImport>
+		<LastRemoteModification>20140711141705</LastRemoteModification>
+		<Source>http://10.65.4.86:8080/CeDeviceTests.SuiteTests.RecordedProgrammesAcceptanceSuite.PvrDevicePlayBackTest</Source>
+	</WikiImport>
+</properties>

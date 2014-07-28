@@ -1,0 +1,28 @@
+[[AMS Services Protocol Reference][https://www.stb.bskyb.com/confluence/display/2016/Application+Middleware+Services+%28AMS%29+Protocol+Reference]]
+
+!contents -R5 -g
+
+| iOS JIRA Reference | iOS Status | Android JIRA Reference | Android Status | Acceptance Tests |
+| [[NGDEV-5938][https://www.stb.bskyb.com/jira/browse/NGDEV-5938]] | DONE | [[NGDEV-8446][https://www.stb.bskyb.com/jira/browse/NGDEV-8446]] | DONE | >RecordedProgrammesAcceptanceSuite.BrowsingTests |
+| [[NGDEV-5941][https://www.stb.bskyb.com/jira/browse/NGDEV-5941]] | DONE | [[NGDEV-8641][https://www.stb.bskyb.com/jira/browse/NGDEV-8641]] | DONE | >RecordedProgrammesAcceptanceSuite.PlaybackTests |
+| [[NGDEV-7302][https://www.stb.bskyb.com/jira/browse/NGDEV-7302]] | DONE | Part of [[NGDEV-8641][https://www.stb.bskyb.com/jira/browse/NGDEV-8641]] | DONE | >RecordedProgrammesAcceptanceSuite.BrowsingTests.GroupedPvrItems |
+| [[NGDEV-7103][https://www.stb.bskyb.com/jira/browse/NGDEV-7103]] | DONE | [[NGDEV-9672][https://www.stb.bskyb.com/jira/browse/NGDEV-9672]] | DONE | >RecordedProgrammesAcceptanceSuite.BrowsingTests.PvrItemListBrowsing |
+| [[NGDEV-7298][https://www.stb.bskyb.com/jira/browse/NGDEV-7298]] | DONE | Part of [[NGDEV-8641][https://www.stb.bskyb.com/jira/browse/NGDEV-8641]] | DONE | >RecordedProgrammesAcceptanceSuite.BrowsingTests.GroupedPvrItems |
+| [[NGDEV-7552][https://www.stb.bskyb.com/jira/browse/NGDEV-7552]] | DONE | [[NGDEV-9453][https://www.stb.bskyb.com/jira/browse/NGDEV-9453]] | DONE | >HomeScreenAcceptanceSuite.HomeScreenBrowsingTests.HomeScreenLinks |
+| [[NGDEV-5885][https://www.stb.bskyb.com/jira/browse/NGDEV-5885]] | DONE | [[NGDEV-9452][https://www.stb.bskyb.com/jira/browse/NGDEV-9452]] | DONE | >TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelListings |
+| [[NGDEV-6021][https://www.stb.bskyb.com/jira/browse/NGDEV-6021]] | DONE | [[NGDEV-9465][https://www.stb.bskyb.com/jira/browse/NGDEV-9465]] | DONE | >TvGuideAcceptanceSuite.TvGuidePlaybackTests |
+| [[NGDEV-8401][https://www.stb.bskyb.com/jira/browse/NGDEV-8401]] | DONE | [[NGDEV-10400][https://www.stb.bskyb.com/jira/browse/NGDEV-10400]] | DONE | >TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelSchedule |
+| [[NGDEV-9592][https://www.stb.bskyb.com/jira/browse/NGDEV-9592]] | DONE | [[NGDEV-9673][https://www.stb.bskyb.com/jira/browse/NGDEV-9673]] | DONE | >RecordedProgrammesAcceptanceSuite.BrowsingTests.GroupedPvrItems |
+| [[NGDEV-7559][https://www.stb.bskyb.com/jira/browse/NGDEV-7559]] | DONE | [[NGDEV-9679][https://www.stb.bskyb.com/jira/browse/NGDEV-9679]] | DONE | >RecordedProgrammesAcceptanceSuite.BrowsingTests.ScheduledRecordingsListBrowsing |
+| [[NGDEV-8340][https://www.stb.bskyb.com/jira/browse/NGDEV-8340]] | DONE | [[NGDEV-9427][https://www.stb.bskyb.com/jira/browse/NGDEV-9427]] | DONE | >TvGuideAcceptanceSuite.TvGuideDayShortcut |
+| [[NGDEV-8639][https://www.stb.bskyb.com/jira/browse/NGDEV-8639]] | DONE | [[NGDEV-9651][https://www.stb.bskyb.com/jira/browse/NGDEV-9651]] | DONE | >TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStrip |
+| [[NGDEV-9831][https://www.stb.bskyb.com/jira/browse/NGDEV-9831]] | DONE | [[NGDEV-10384][https://www.stb.bskyb.com/jira/browse/NGDEV-10384]] | IN PROGRESS | >RecordedProgrammesAcceptanceSuite.SyncRecordingTests |
+| [[NGDEV-8789][https://www.stb.bskyb.com/jira/browse/NGDEV-8789]] | DONE | [[NGDEV-9660][https://www.stb.bskyb.com/jira/browse/NGDEV-9660]] | DONE | >TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStripBadges |
+| [[NGDEV-8894][https://www.stb.bskyb.com/jira/browse/NGDEV-8894]] | DONE | | DESCOPED | >TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStripBadges |
+| [[NGDEV-8775][https://www.stb.bskyb.com/jira/browse/NGDEV-8775]] | DONE | [[NGDEV-9659][https://www.stb.bskyb.com/jira/browse/NGDEV-9659]] | DONE | >TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStripBadges |
+| [[NGDEV-8772][https://www.stb.bskyb.com/jira/browse/NGDEV-8772]] | DONE | [[NGDEV-9658][https://www.stb.bskyb.com/jira/browse/NGDEV-9658]] | DONE | >TvGuideAcceptanceSuite.TvGuideBrowsingTests.ChannelProgrammeStripBadges |
+| [[NGDEV-8378][https://www.stb.bskyb.com/jira/browse/NGDEV-8378]] | DONE | [[NGDEV-10000][https://www.stb.bskyb.com/jira/browse/NGDEV-10000]] | DONE | >TvGuideAcceptanceSuite.TvGuideRecordingTests |
+| [[NGDEV-10540][https://www.stb.bskyb.com/jira/browse/NGDEV-10540]] | DONE | [[NGDEV-11032][https://www.stb.bskyb.com/jira/browse/NGDEV-11032]] | DONE | >RecordedProgrammesAcceptanceSuite.BrowsingTests.VisualIndicationForUnwatchedProgrammes |
+| [[NGDEV-8535][https://www.stb.bskyb.com/jira/browse/NGDEV-8535]] | DONE | [[NGDEV-9698][https://www.stb.bskyb.com/jira/browse/NGDEV-9698]] | DONE | >RecordedProgrammesAcceptanceSuite.BrowsingTests.NoRecordingsErrorMessagePage |
+| | - | [[NGDEV-11207][https://www.stb.bskyb.com/jira/browse/NGDEV-11207]] | DONE | >SearchAndDiscovery |
+| | IN PROGRESS| [[NGDEV-10979][https://www.stb.bskyb.com/jira/browse/NGDEV-10979]] | IN PROGRESS | >TvGuideAcceptanceSuite.TvGuideDateTime |

@@ -1,0 +1,43 @@
+!1 iOS User Story
+Covers the following User Stories related to Grouping
+|comment                                                                                                                                                              |
+|[[NGDEV-5885][https://www.stb.bskyb.com/jira/browse/NGDEV-5885]]                |CE Device - (7167-A) "TV Guide" - Display the channel listing                       |
+|Test Traceability Notes                                                         |As part of Fitnesse tests we cover Acceptance Criteria 7,8, 9 and 10.               |
+|As a Viewer I want to view a default list of channels (London bouquet) on my device (when In-Home) so that I can get a view of all the channels that Sky has to offer|
+
+!1 Android User Story
+|comment                                                                                                                                                              |
+|[[NGDEV-9452][https://www.stb.bskyb.com/jira/browse/NGDEV-9452]]                 |CE Device - (7167-A) "TV Guide" - Display the channel listing                      |
+|Test Traceability Notes                                                          |As part of Fitnesse tests we cover most of the Acceptance Criteria                 |
+|As a Viewer I want to view a default list of channels (London bouquet) on my device (when In-Home) so that I can get a view of all the channels that Sky has to offer|
+
+!1 Acceptance Criteria
+!3 Scenario : Given list of channels, the channels are ordered in the sequential ascending order of Logical Channel Number (LCN)
+ * Channel Title should be displayed
+ * Channels should be in sequential ascending order of LCN
+ * Adult Free Channels should be displayed
+ * Radio Channels should not be displayed
+ * Pay Per View Channels should not be displayed
+
+'''Expected Results'''
+
+!| Query:(BEN) Channel List Fixture|
+|Channel                           |
+|BBC One                           |
+|BBC Two HD                        |
+|ITV                               |
+|Channel 4                         |
+|Channel 5                         |
+|Sky 1 HD                          |
+|Sky Living HD                     |
+|Gay Network                       |
+|Babestation                       |
+
+!1 Errors Scenarios
+Scenario : Given channel listings, when a 404 error occurs , then a message is displayed
+
+!| script |(CEF) Data Loading Error Fixture                  |
+|http code|404    |error code              |1000             |
+|check    |message|Failed to load data from your set-top box.|
+|http code|200    |error code              |                 |
+|check    |message|null                                      |

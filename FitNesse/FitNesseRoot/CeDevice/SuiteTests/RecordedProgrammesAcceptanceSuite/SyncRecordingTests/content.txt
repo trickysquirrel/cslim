@@ -1,0 +1,79 @@
+!lastmodified
+!1 Maintain an up-to-date list of recordings on the CE Device
+Scenario : Given an item starts being recorded, then it should appear in the recordings list
+
+!| DT:(BEN) Recordings Builder                                                                |
+|Title     |Channel       |Epoch Time|Status  |ID |Duration|Channel Number|Date|
+|James Bond|Sky Movies 007|1388869200|RECORDED|002|300     |129           |04-01-2014 9:00pm  |
+
+!| script|(BEN) Grouped Recorded Programmes Fixture       |
+|load                                                     |
+|check   |number of items      |1                         |
+|add item|Wheeler Dealers      |status|RECORDING|date|$NOW|
+|check   |inserted row position|1                         |
+|check   |inserted row title   |Wheeler Dealers           |
+|check   |number of items      |2                         |
+
+Given a recording is added that started before an initial recording, the item is inserted below it.
+
+!| DT:(BEN) Recordings Builder                                                                |
+|Title     |Channel       |Epoch Time|Status  |ID |Duration|Channel Number|Date|
+|James Bond|Sky Movies 007|1388869200|RECORDED|002|300     |129           |04-01-2014 9:00pm  |
+
+!| script|(BEN) Grouped Recorded Programmes Fixture        |
+|load                                                      |
+|check   |number of items      |1                          |
+|add item|Wheeler Dealers      |status|RECORDING|date|$PAST|
+|check   |inserted row position|2                          |
+|check   |inserted row title   |Wheeler Dealers            |
+|check   |number of items      |2                          |
+
+!4 Scenario : Given an item is recorded on the set top box, when it is permanently deleted, then it should disappear from recordings
+!| DT:(BEN) Recordings Builder                                                                |
+|Title     |Channel       |Epoch Time|Status  |ID |Duration|Channel Number|Date|
+|James Bond|Sky Movies 007|1388869200|RECORDED|002|300     |129           |04-01-2014 9:00pm  |
+
+!| script   |(BEN) List Recorded Programmes Fixture|James Bond|129|Sky Movies 007|
+|load                                                                            |
+|check      |number of items                       |1                            |
+|delete item|002                                                                 |
+|check      |did delete row                        |1                            |
+|check      |number of items                       |0                            |
+
+!4 Scenario : Given an item is recorded on the set top box, when it is marked as deleted, then it should disappear from Scheduled recordings
+!| DT:(BEN) Recordings Builder                                                                |
+|Title     |Channel       |Epoch Time|Status  |ID |Duration|Channel Number|Date|
+|James Bond|Sky Movies 007|1388869200|RECORDED|002|300     |129           |04-01-2014 9:00pm  |
+
+!| script   |(BEN) List Recorded Programmes Fixture|James Bond|129           |Sky Movies 007|
+|load                                                                                       |
+|check      |number of items                       |1                                       |
+|update item|002                                   |column    |isDeletedOnSTB|value  |true  |
+|check      |did delete row                        |1                                       |
+|check      |number of items                       |0                                       |
+
+!4 Scenario : Given a new item becomes scheduled for recording, then it should appear in scheduled records list
+!| DT:(BEN) Recordings Builder                                          |
+|Title     |Channel       |Date   |Status   |ID |Duration|Channel Number|
+|James Bond|Sky Movies 007|$FUTURE|SCHEDULED|002|300     |129           |
+
+!| script|(BEN) List Scheduled Recordings Fixture         |
+|load                                                     |
+|check   |number of items      |1                         |
+|add item|Wheeler Dealers      |status|SCHEDULED|date|$NOW|
+|check   |inserted row position|1                         |
+|check   |inserted row title   |Wheeler Dealers           |
+|check   |number of items      |2                         |
+
+!4 Scenario : Given an item is scheduled, and when item status changes to recording, then the item should disappear from Scheduled recordings
+!| DT:(BEN) Recordings Builder                                          |
+|Title     |Channel       |Date   |Status   |ID |Duration|Channel Number|
+|James Bond|Sky Movies 007|$FUTURE|SCHEDULED|002|300     |129           |
+|Farscape  |FFX           |$NOW   |SCHEDULED|006|300     |172           |
+
+!| script   |(BEN) List Scheduled Recordings Fixture      |
+|load                                                     |
+|check      |number of items|2                            |
+|update item|006            |column|Status|value|RECORDING|
+|check      |did delete row |1                            |
+|check      |number of items|1                            |

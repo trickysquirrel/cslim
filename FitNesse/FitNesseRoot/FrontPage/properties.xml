@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<properties>
+	<AddChild/>
+	<Edit/>
+	<Files/>
+	<Properties/>
+	<Prune/>
+	<RecentChanges/>
+	<Search/>
+	<Static/>
+	<Versions/>
+	<WhereUsed/>
+	<WikiImport>
+		<IsRoot/>
+		<Source>http://ci:8080/CeDeviceTests</Source>
+	</WikiImport>
+</properties>

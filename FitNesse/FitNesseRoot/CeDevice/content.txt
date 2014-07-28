@@ -1,0 +1,12 @@
+!1 Updating Tests
+Before starting work update to the latest version of the Test Suite at [[CE-Fitnesse][http://172.20.124.72:8080/CeDeviceTests]]. This is done via Tools > [[Properties][/CeDevice?properties]] using '''Wiki Import Update > Update Subpages'''. After Importing if there are Suites currently not relevant to the feature being worked on then delete those pages manually in !-FitnesseRoot-! (on your file system)
+
+!contents -R3 -g
+
+!note Modify the TEST_RUNNER variable below for your specific development environment
+!define TEST_SYSTEM {slim}
+!define TEST_RUNNER {bin/RunSlimTestsTargetWithSlimPort}
+!define COMMAND_PATTERN {%m}
+!define SLIM_VERSION {0.3}
+!define SLIM_HOST {127.0.0.1}
+!define SLIM_PORT {8085}

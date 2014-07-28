@@ -1,0 +1,9 @@
+----
+'''Given the following home environments the system behaves as follows:'''
+
+!|(BEN) Grouped Recorded Programme Connectivity Fixture                                                |
+|Connected|Ethan Box|Recordings|Error|message?                                                         |
+|false    |true     |true      |     |No set-top box found.                                            |
+|true     |true     |true      |500  |There was a problem loading the recordings from your set-top box.|
+|true     |true     |false     |     |You currently have no recordings                                 |
+|true     |false    |true      |     |No set-top box found.                                            |

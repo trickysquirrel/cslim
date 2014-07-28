@@ -1,0 +1,73 @@
+!1 User Story
+Covers the following User Stories related to Tv Guide
+
+!5 
+!5 Jira Reference:  https://www.stb.bskyb.com/jira/browse/NGDEV-5885
+!5 '''Details :''' CE Device - (7167-A) "TV Guide" - Display the channel listing
+!5 '''Test Traceability Notes :''' As part of Fitnesse tests we cover Acceptance Criteria 7 & 8.
+!1 Acceptance Criteria
+!3 Scenario : Given list of channels, the system displays the channel titles
+ * Channel Title should be displayed
+
+'''Input Data : Channel Lists'''
+!include -seamless <TvGuideAcceptanceSuite.TvChannelsData
+
+'''Expected Results'''
+
+!| Query:(BEN) Channel List Fixture |
+| Channel |
+| BBC One |
+| BBC Two HD |
+| ITV |
+| Channel 4 |
+| Channel 5 |
+| Sky 1 HD |
+| Sky Living HD |
+
+!3 Scenario : Given list of channels, the channels are ordered in the sequential ascending order of Logical Channel Number (LCN)
+ * Channel Title should be displayed
+ * Channels should be in sequential ascending order of LCN
+
+'''Input Data : Channel Lists'''
+
+!| DT:(BEN) Channels Builder |
+| Channel | Channel Number |
+| ITV HD | 178 |
+| Sky Movies 007 | 307 |
+| Comedy Central | 127 |
+| Comedy Central+1 | 128 |
+| Quest+1 | 195 |
+| ITV | 103 |
+
+'''Expected Results'''
+
+!| Ordered Query:(BEN) Channel List Fixture |
+| Channel |
+| ITV |
+| Comedy Central |
+| Comedy Central+1 |
+| ITV HD |
+| Quest+1 |
+| Sky Movies 007 |
+
+!1 Errors Scenarios
+Scenario : Given channel listings, when a 404 error occurs , then a message is displayed
+
+!| script | (BEN) Channel Listing Fixture |
+| channel item | 120 |
+| error code | 1502 |
+| check | message | sid is not ready |
+
+Scenario : Given channel listings, when a 500 error occurs , then a message is displayed
+
+!| script | (BEN) Channel Listing Fixture |
+| channel item | 120 |
+| error code | 1503 |
+| check | message | return status failed |
+
+Scenario : Given channel listings, when the AMS service is unavailable 503 , then a message is displayed
+
+!| script | (BEN) Channel Listing Fixture |
+| channel item | 120 |
+| error code | 1401 |
+| check | message | a default service is currently unavailable |

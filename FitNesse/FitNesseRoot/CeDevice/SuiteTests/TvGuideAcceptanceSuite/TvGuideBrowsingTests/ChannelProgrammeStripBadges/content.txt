@@ -1,0 +1,39 @@
+!1 iOS User Story
+| Comment |
+| [[NGDEV-8789][https://www.stb.bskyb.com/jira/browse/NGDEV-8789]], [[NGDEV-8894][https://www.stb.bskyb.com/jira/browse/NGDEV-8894]], [[NGDEV-8775][https://www.stb.bskyb.com/jira/browse/NGDEV-8775]], [[NGDEV-8772][https://www.stb.bskyb.com/jira/browse/NGDEV-8772]] | Display the labels i.e., Duration, Subtitle, Audio Description, Age Rating, HD and  where possible channel title, synopsis, broadcast time for a linear programme in the programme strip |
+| Test Traceability Notes | As part of Fitnesse tests we cover most of the Acceptance Criteria |
+| As a viewer I want to see the list of labels i.e., Duration, Subtitle, Audio Description, Age Rating and HD  where possible |
+
+!1 Android User Story
+| Comment |
+| [[NGDEV-9651][https://www.stb.bskyb.com/jira/browse/NGDEV-9651]] | Display the labels i.e., Duration, Subtitle, Audio Description, Age Rating, HD and where possiblechannel title, synopsis, broadcast time for a linear programme in the programme strip |
+| Test Traceability Notes | As part of Fitnesse tests we cover most of the Acceptance Criteria |
+| As a viewer I want to see the list of labels i.e., Duration, Subtitle, Audio Description, Age Rating and HD where possible |
+
+!4 Scenario: Check selected programmes displays Title, Subtitle, Audio Description, Age Rating, HD
+Where the flag is set to "true" -  display the badge
+
+Where the flag is set to "false" -  do not display the badge
+
+'''Expected Results'''
+
+| DT: (CEF) Programme Strip Badge Fixture |
+| Event Id | Programme Title? | Time? | Synopsis? | Duration? | Subtitle? | Audio Description? | Age Rating? | HD? |
+| E7d2-e4ad | In the Future | 11:00am - 11:00am | | 0m | true | true | U | true |
+| E7d2-e3m2 | Tomorrow People | 12:00am - 12:30am | | 30m | false | false | PG | false |
+| E7d2-e3m3 | Pepper Pig | 12:30am - 1:00am | | 30m | false | false | 12 | false |
+| E7d2-e3af | Budget 2014 | 12:30am - 10:00am | | 9hrs 30m | false | false | 15 | false |
+| E7d2-e3ag | ITV News | 10:00am - 12:00pm | | 2hrs | false | false | 18 | false |
+| E7d2-e3dd | The Chase | 12:00pm - 1:00pm | | 1hr | true | true | null | false |
+| E7d2-e3xx | Emmerdale | 1:00pm - 5:00pm | | 4hrs | false | false | null | false |
+| E7d2-e3ww | Coronation Street | 5:00pm - 10:00pm | Will Tyrone resist Maria? Rita receives news of Dennis | 5hrs | false | false | null | false |
+| E7d2-e3b0 | Law & Order UK | 10:00pm - 10:30pm | | 30m | true | true | 18 | true |
+| E7d2-e3m1 | This Morning | 10:30pm - 12:30am | | 2hrs | false | false | null | false |
+| E7d2-e58c | Uefa Champions League Highlights | 11:00pm - 12:28am | | 1hr 28m | true | true | 15 | true |
+| E7d2-e3ae | Ancient History | 12:00am - 12:00am | | 0m | true | true | PG | true |
+| E7d3-e3d4 | The Zero Minute Show | 12:00pm - 12:00pm | | 0m | false | false | null | false |
+| E7d3-e6da | Coronation Street | 5:00pm - 10:00pm | | 5hrs | false | false | U | false |
+| E7d3-e55d | This Morning | 11:00pm - 11:30pm | | 30m | false | false | 15 | false |
+| E7d3-e5bd | Great History | 11:00pm - 11:00pm | | 0m | false | false | null | false |
+
+''!include -c ''<TvGuideAcceptanceSuite.ChannelScheduleErrorPage
